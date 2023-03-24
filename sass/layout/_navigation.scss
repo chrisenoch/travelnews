@@ -2,10 +2,24 @@
   height: 6rem;
   font-size: 1.4rem;
   border-bottom: 1px solid var(--color-navbar-border);
-  display: grid;
-  grid-template-columns: minmax(min-content, max-content) 1fr;
-  align-items: center;
-  padding: 0 var(--spacing-3-2);
+  // font-weight: 500;
+
+  // padding: 0 var(--spacing-4-8);
+
+  &__container {
+    height: 100%;
+    width: 120rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(min-content, max-content) 1fr;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-primary);
+  }
 
   &__left {
   }
@@ -14,5 +28,19 @@
     display: flex;
     justify-content: flex-end;
     gap: var(--spacing-3-2);
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: var(--color-text);
+    }
+
+    &:hover,
+    &:active {
+      color: var(--color-tertiary);
+    }
   }
 }

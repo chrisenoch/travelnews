@@ -11,6 +11,9 @@
   --color-navbar-border: hsl(0, 0%, 95%);
   --color-primary: hsl(187, 90%, 47%);
   --color-primary: hsl(195, 83%, 63%);
+  --color-primary: hsl(180, 20%, 39%);
+  --color-secondary: hsl(217, 16%, 36%);
+  --color-tertiary: hsl(37, 60%, 53%);
   --spacing-0-2: 0.2rem;
   --spacing-0-4: 0.4rem;
   --spacing-0-8: 0.8rem;
@@ -307,15 +310,35 @@ body {
   display: block;
   margin: 0 auto; }
 
+.page-container {
+  height: 100%;
+  width: 112rem;
+  display: flex;
+  margin: 0 auto;
+  display: flex; }
+
 .nav {
   height: 6rem;
   font-size: 1.4rem;
-  border-bottom: 1px solid var(--color-navbar-border);
-  display: grid;
-  grid-template-columns: minmax(min-content, max-content) 1fr;
-  align-items: center;
-  padding: 0 var(--spacing-3-2); }
+  border-bottom: 1px solid var(--color-navbar-border); }
+  .nav__container {
+    height: 100%;
+    width: 120rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(min-content, max-content) 1fr;
+    align-items: center; }
+  .nav__logo {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-primary); }
   .nav__right {
     display: flex;
     justify-content: flex-end;
     gap: var(--spacing-3-2); }
+  .nav__link {
+    text-decoration: none; }
+    .nav__link:link, .nav__link:visited {
+      color: var(--color-text); }
+    .nav__link:hover, .nav__link:active {
+      color: var(--color-tertiary); }
