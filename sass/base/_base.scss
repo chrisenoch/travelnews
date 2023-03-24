@@ -1,0 +1,65 @@
+:root {
+  --color-headline: hsl(0, 0%, 13%); /* 222 */
+  --color-text: hsl(0, 0%, 20%); /* 333*/
+  --color-text-light: hsl(0, 0%, 40%); /* 666 */
+  --color-text-light-2: hsl(0, 0%, 47%); /*777 */
+  --color-border: hsl(0, 0%, 80%);
+  --color-navbar-border: hsl(0, 0%, 95%);
+
+  --color-primary: hsl(187, 90%, 47%);
+  --color-primary: hsl(195, 83%, 63%);
+
+  --spacing-0-2: 0.2rem;
+  --spacing-0-4: 0.4rem;
+  --spacing-0-8: 0.8rem;
+  --spacing-1-6: 1.6rem;
+  --spacing-2-4: 2.4rem;
+  --spacing-3-2: 3.2rem;
+  --spacing-4-8: 4.8rem;
+  --spacing-6-4: 6.4rem;
+  --spacing-9-6: 9.6rem;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 0; /* overrides style in normalize.css */
+}
+
+li {
+  list-style: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+img,
+audio,
+video {
+  max-width: 100%;
+}
+
+svg {
+  display: block; /* removes default whitespace from below SVGs */
+}

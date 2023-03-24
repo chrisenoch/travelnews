@@ -1,0 +1,14 @@
+{
+  "name": "travel_news",
+  "version": "1.0.0",
+  "description": "Travel news website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Chris Enoch",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
