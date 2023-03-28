@@ -1,0 +1,76 @@
+// .test {
+//   grid-column: span 6;
+// }
+
+.travel-guides {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2.4rem;
+  width: 100%;
+  //   background-color: lightgreen;
+  padding-top: var(--spacing-6-4);
+  font-size: 1.4rem;
+
+  a:link,
+  a:visited {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .heading:hover,
+  .heading:active {
+    color: var(--color-tertiary);
+  }
+
+  &__section-a {
+    text-align: center;
+    grid-column: span 6;
+
+    img {
+      display: block;
+      object-fit: cover;
+      background-position: center;
+    }
+  }
+
+  &__article-a {
+    padding: var(--spacing-2-4) var(--spacing-6-4);
+    background-color: var(--color-navbar-border);
+  }
+
+  &__section-b {
+    display: grid;
+    gap: 2.4rem;
+    grid-column: span 6;
+    align-content: start;
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 8.85rem) repeat(4, 1fr);
+    }
+
+    img {
+      grid-column: 1 / 3;
+      object-fit: cover;
+      background-position: center;
+      // height: 100%;
+    }
+  }
+
+  &__article-b {
+    grid-column: 3 / 7;
+
+    > article {
+      padding-left: var(--spacing-0-8);
+    }
+  }
+
+  &__section-c {
+    grid-column: span 3;
+
+    img {
+      max-height: 16rem;
+      object-fit: cover;
+    }
+  }
+}
