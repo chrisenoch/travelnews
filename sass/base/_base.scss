@@ -58,6 +58,17 @@ button {
   cursor: pointer;
 }
 
+a:link,
+a:visited {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: var(--color-tertiary);
+}
+
 img,
 audio,
 video {
