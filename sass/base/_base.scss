@@ -6,12 +6,13 @@
   --color-border: hsl(0, 0%, 80%);
   --color-navbar-border: hsl(0, 0%, 95%);
 
-  --color-primary: hsl(187, 90%, 47%);
-  --color-primary: hsl(195, 83%, 63%);
-  --color-primary: hsl(180, 20%, 39%);
-  --color-secondary: hsl(217, 16%, 36%);
-  --color-tertiary: hsl(37, 60%, 53%);
+  // --color-primary: hsl(187, 90%, 47%);
+  // --color-primary: hsl(195, 83%, 63%);
+  // --color-tertiary: hsl(37, 60%, 53%);
+  --color-primary: #008080;
+  --color-tertiary: #bf5500;
 
+  /* Spoacing to be used with padding and borders. The idea is to use these as enums in order to avoid errors. */
   --spacing-0-2: 0.2rem;
   --spacing-0-4: 0.4rem;
   --spacing-0-8: 0.8rem;

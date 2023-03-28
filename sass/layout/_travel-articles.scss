@@ -1,0 +1,35 @@
+.travel-guides {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  width: 100%;
+  //   background-color: lightgreen;
+  padding-top: var(--spacing-6-4);
+  font-size: 1.4rem;
+
+  &__article-a {
+    text-align: center;
+    font-weight: 400;
+    img {
+      max-height: 32rem;
+      display: block;
+    }
+
+    &__container {
+      padding: var(--spacing-2-4) var(--spacing-6-4);
+      background-color: var(--color-navbar-border);
+    }
+    grid-column: span 6;
+  }
+
+  &__article-b {
+    &__item-1 {
+    }
+    &__item-2 {
+    }
+    &__item-3 {
+    }
+    &__item-4 {
+    }
+  }
+}

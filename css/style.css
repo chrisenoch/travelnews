@@ -9,11 +9,9 @@
   /*777 */
   --color-border: hsl(0, 0%, 80%);
   --color-navbar-border: hsl(0, 0%, 95%);
-  --color-primary: hsl(187, 90%, 47%);
-  --color-primary: hsl(195, 83%, 63%);
-  --color-primary: hsl(180, 20%, 39%);
-  --color-secondary: hsl(217, 16%, 36%);
-  --color-tertiary: hsl(37, 60%, 53%);
+  --color-primary: #008080;
+  --color-tertiary: #bf5500;
+  /* Spoacing to be used with padding and borders. The idea is to use these as enums in order to avoid errors. */
   --spacing-0-2: 0.2rem;
   --spacing-0-4: 0.4rem;
   --spacing-0-8: 0.8rem;
@@ -65,6 +63,46 @@ body {
   font-family: Poppins, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   color: var(--color-text); }
+
+.heading {
+  font-family: "Andada Pro"; }
+
+.t-8 {
+  font-size: 8px; }
+
+.t-10 {
+  font-size: 10px; }
+
+.t-12 {
+  font-size: 12px; }
+
+.t-14 {
+  font-size: 14px; }
+
+.t-16 {
+  font-size: 16px; }
+
+.t-20 {
+  font-size: 20px; }
+
+.t-24 {
+  font-size: 24px; }
+
+.t-32 {
+  font-size: 32px; }
+
+.t-40 {
+  font-size: 40px;
+  line-height: 1.2; }
+
+.t-48 {
+  font-size: 48px; }
+
+.t-64 {
+  font-size: 64px; }
+
+.t-96 {
+  font-size: 96px; }
 
 .absolute-centre {
   position: absolute;
@@ -311,11 +349,28 @@ body {
   margin: 0 auto; }
 
 .page-container {
-  height: 100%;
   width: 112rem;
   display: flex;
   margin: 0 auto;
-  display: flex; }
+  height: 1000px; }
+
+.travel-guides {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  width: 100%;
+  padding-top: var(--spacing-6-4);
+  font-size: 1.4rem; }
+  .travel-guides__article-a {
+    text-align: center;
+    font-weight: 400;
+    grid-column: span 6; }
+    .travel-guides__article-a img {
+      max-height: 32rem;
+      display: block; }
+    .travel-guides__article-a__container {
+      padding: var(--spacing-2-4) var(--spacing-6-4);
+      background-color: var(--color-navbar-border); }
 
 .nav {
   height: 6rem;
