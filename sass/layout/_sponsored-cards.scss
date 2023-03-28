@@ -1,0 +1,38 @@
+.sponsored-cards {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 1fr) repeat(2, 2.5fr) 1fr;
+  gap: 2.4rem;
+  width: 100%;
+  //   background-color: lightgreen;
+  padding-top: var(--spacing-6-4);
+  font-size: 1.4rem;
+
+  &__card {
+    img {
+      height: 20rem;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(90%);
+      width: 100%;
+    }
+  }
+
+  &__card--a {
+    grid-column: 2 / 6;
+  }
+  &__card--b {
+    grid-column: 6 / 7;
+  }
+  &__card--c {
+    grid-column: 7 / 8;
+  }
+  // &__card--d {
+  //   grid-column: 2 / 4;
+  // }
+  // &__card--e {
+  //   grid-column: 4 / 6;
+  // }
+  // &__card--f {
+  //   grid-column: 6 / 8;
+  // }
+}
