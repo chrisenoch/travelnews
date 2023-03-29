@@ -1,12 +1,19 @@
 .sponsored-cards {
   padding-top: var(--spacing-3-2);
   font-size: 1.4rem;
+  background-color: lightpink;
 
   &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2.4rem;
+  }
+
+  &__stop-flex-wrap {
+    display: flex;
+    gap: 2.4rem;
+    width: 41.6rem; /* width of two small cards plus gap from sponsored-cards__container class  */
   }
 
   &__card {
@@ -20,43 +27,23 @@
     }
   }
 
-  &__card--a {
+  &__card--md {
     flex: 0 1 41.6rem;
   }
-  &__card--b {
+  &__card--sm {
     flex: 0 1 19.6rem;
   }
-  &__card--c {
+  &__card--sm {
     flex: 0 1 19.6rem;
   }
 
-  &__card--d {
+  &__card--sm {
     flex: 0 1 19.6rem;
   }
-  &__card--e {
+  &__card--sm {
     flex: 0 1 19.6rem;
   }
-  &__card--f {
+  &__card--md {
     flex: 0 1 41.6rem;
   }
-
-  // &__card--a {
-  //   grid-column: 3 / 12;
-  // }
-  // &__card--b {
-  //   grid-column: 12 / 17;
-  // }
-  // &__card--c {
-  //   grid-column: 17 / 22;
-  // }
-
-  // &__card--d {
-  //   grid-column: 3 / 8;
-  // }
-  // &__card--e {
-  //   grid-column: 8 / 13;
-  // }
-  // &__card--f {
-  //   grid-column: 13 / 22;
-  // }
 }
