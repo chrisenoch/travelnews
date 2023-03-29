@@ -11,6 +11,7 @@
   --color-navbar-border: hsl(0, 0%, 95%);
   --color-primary: #008080;
   --color-tertiary: #bf5500;
+  --color-tertiary: rgb(214, 140, 3);
   /* Spoacing to be used with padding and borders. The idea is to use these as enums in order to avoid errors. */
   --spacing-0-2: 0.2rem;
   --spacing-0-4: 0.4rem;
@@ -130,15 +131,6 @@ body {
   height: -4rem;
   width: -4rem;
   border-radius: 50%; }
-
-a:link,
-a:visited {
-  color: var(--color-text);
-  text-decoration: none; }
-
-a.heading:hover,
-a.heading:active {
-  color: var(--color-tertiary); }
 
 .mt-0-2 {
   margin-top: 0.2rem; }
@@ -387,8 +379,8 @@ a.heading:active {
   .travel-guides a:visited {
     color: var(--color-text);
     text-decoration: none; }
-  .travel-guides .heading:hover,
-  .travel-guides .heading:active {
+  .travel-guides a .heading:hover,
+  .travel-guides a .heading:active {
     color: var(--color-tertiary); }
   .travel-guides__section-a {
     text-align: center;
@@ -429,31 +421,23 @@ a.heading:active {
   font-size: 14px;
   padding-top: var(--spacing-3-2); }
   .travel-news__section-a {
-    grid-column: span 3;
-    grid-row: 1 / 2;
-    /* delete*/ }
-    .travel-news__section-a__article-1 {
-      background-color: lightcoral;
-      /* delete*/ }
-    .travel-news__section-a__article-2 {
-      background-color: lightgoldenrodyellow;
-      /* delete*/ }
-    .travel-news__section-a__article-3 {
-      background-color: lightblue;
-      /* delete*/ }
-  .travel-news__section-b {
-    grid-column: span 5;
-    grid-row: 1 / 2;
-    height: 100px;
-    /* delete*/ }
-  .travel-news__section-c {
     grid-column: span 4;
     grid-row: 1 / 3; }
-    .travel-news__section-c__article-1 {
-      background-color: lightgreen;
-      /* delete*/ }
-    .travel-news__section-c__article-2 {
-      background-color: lightgray; }
+  .travel-news__section-b {
+    grid-column: span 5;
+    grid-row: 1 / 2; }
+    .travel-news__section-b img {
+      max-height: 100%; }
+  .travel-news__section-c {
+    grid-column: span 3;
+    grid-row: 1 / 2; }
+  .travel-news a:link,
+  .travel-news a:visited {
+    color: var(--color-text);
+    text-decoration: none; }
+  .travel-news a .heading:hover,
+  .travel-news a .heading:active {
+    color: var(--color-tertiary); }
 
 .sponsored-cards {
   padding-top: var(--spacing-3-2);
