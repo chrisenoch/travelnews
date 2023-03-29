@@ -1,10 +1,11 @@
 .sponsored-cards {
-  display: grid;
-  grid-template-columns: 1fr repeat(4, 1fr) repeat(2, 2.5fr) 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2.4rem;
   width: 100%;
   //   background-color: lightgreen;
-  padding-top: var(--spacing-6-4);
+  padding-top: var(--spacing-3-2);
   font-size: 1.4rem;
 
   &__card {
@@ -18,21 +19,42 @@
   }
 
   &__card--a {
-    grid-column: 2 / 6;
+    flex: 0 1 41.6rem;
   }
   &__card--b {
-    grid-column: 6 / 7;
+    flex: 0 1 19.6rem;
   }
   &__card--c {
-    grid-column: 7 / 8;
+    flex: 0 1 19.6rem;
   }
+
+  &__card--d {
+    flex: 0 1 19.6rem;
+  }
+  &__card--e {
+    flex: 0 1 19.6rem;
+  }
+  &__card--f {
+    flex: 0 1 41.6rem;
+  }
+
+  // &__card--a {
+  //   grid-column: 3 / 12;
+  // }
+  // &__card--b {
+  //   grid-column: 12 / 17;
+  // }
+  // &__card--c {
+  //   grid-column: 17 / 22;
+  // }
+
   // &__card--d {
-  //   grid-column: 2 / 4;
+  //   grid-column: 3 / 8;
   // }
   // &__card--e {
-  //   grid-column: 4 / 6;
+  //   grid-column: 8 / 13;
   // }
   // &__card--f {
-  //   grid-column: 6 / 8;
+  //   grid-column: 13 / 22;
   // }
 }

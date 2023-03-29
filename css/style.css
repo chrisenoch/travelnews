@@ -360,9 +360,10 @@ body {
   margin: 0 auto; }
 
 .page-container {
-  width: 120rem;
+  max-width: 1220px;
+  padding: 0 10px;
   margin: 0 auto;
-  height: 1500px; }
+  height: 3000px; }
 
 .travel-guides {
   display: grid;
@@ -411,11 +412,12 @@ body {
       object-fit: cover; }
 
 .sponsored-cards {
-  display: grid;
-  grid-template-columns: 1fr repeat(4, 1fr) repeat(2, 2.5fr) 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2.4rem;
   width: 100%;
-  padding-top: var(--spacing-6-4);
+  padding-top: var(--spacing-3-2);
   font-size: 1.4rem; }
   .sponsored-cards__card img {
     height: 20rem;
@@ -424,11 +426,17 @@ body {
     filter: brightness(90%);
     width: 100%; }
   .sponsored-cards__card--a {
-    grid-column: 2 / 6; }
+    flex: 0 1 41.6rem; }
   .sponsored-cards__card--b {
-    grid-column: 6 / 7; }
+    flex: 0 1 19.6rem; }
   .sponsored-cards__card--c {
-    grid-column: 7 / 8; }
+    flex: 0 1 19.6rem; }
+  .sponsored-cards__card--d {
+    flex: 0 1 19.6rem; }
+  .sponsored-cards__card--e {
+    flex: 0 1 19.6rem; }
+  .sponsored-cards__card--f {
+    flex: 0 1 41.6rem; }
 
 .nav {
   height: 6rem;
