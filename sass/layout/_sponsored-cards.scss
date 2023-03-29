@@ -1,7 +1,6 @@
 .sponsored-cards {
   padding-top: var(--spacing-3-2);
   font-size: 1.4rem;
-  background-color: lightpink;
 
   &__container {
     display: flex;
@@ -21,29 +20,42 @@
       height: 20rem;
       object-fit: cover;
       object-position: center;
-      filter: brightness(90%);
+      filter: brightness(80%);
       width: 100%;
       display: block;
+      border-radius: 10px;
     }
   }
 
   &__card--md {
     flex: 0 1 41.6rem;
+    position: relative;
   }
   &__card--sm {
     flex: 0 1 19.6rem;
+    position: relative;
   }
-  &__card--sm {
-    flex: 0 1 19.6rem;
+  &__destination {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    text-shadow: 0.2px 0.2px 0.2px black;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0 var(--spacing-0-4);
+    border-radius: 5px;
   }
 
-  &__card--sm {
-    flex: 0 1 19.6rem;
-  }
-  &__card--sm {
-    flex: 0 1 19.6rem;
-  }
-  &__card--md {
-    flex: 0 1 41.6rem;
+  &__price {
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: #f2007d;
+    padding: var(--spacing-0-4) var(--spacing-0-8);
+    border-radius: 5px;
   }
 }
