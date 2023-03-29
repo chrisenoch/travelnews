@@ -1,0 +1,70 @@
+.sponsored-cards {
+  padding-top: var(--spacing-3-2);
+  font-size: 1.4rem;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.4rem;
+  }
+
+  &__stop-flex-wrap {
+    display: flex;
+    gap: 2.4rem;
+    width: 41.6rem; /* width of two small cards plus gap from sponsored-cards__container class  */
+  }
+
+  &__card {
+    img {
+      height: 20rem;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(80%);
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      transition: transform 0.8s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__card--md {
+    flex: 0 1 41.6rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  &__card--sm {
+    flex: 0 1 19.6rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  &__destination {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    text-shadow: 0.2px 0.2px 0.2px black;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0 var(--spacing-0-4);
+    border-radius: 5px;
+  }
+
+  &__price {
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: #f2007d;
+    padding: var(--spacing-0-4) var(--spacing-0-8);
+    border-radius: 5px;
+  }
+}
