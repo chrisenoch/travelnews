@@ -1,12 +1,13 @@
 .sponsored-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2.4rem;
-  width: 100%;
-  //   background-color: lightgreen;
   padding-top: var(--spacing-3-2);
   font-size: 1.4rem;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.4rem;
+  }
 
   &__card {
     img {
@@ -15,6 +16,7 @@
       object-position: center;
       filter: brightness(90%);
       width: 100%;
+      display: block;
     }
   }
 
