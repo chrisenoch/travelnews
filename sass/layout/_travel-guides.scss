@@ -6,10 +6,9 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 2.4rem;
-  width: 100%;
   //   background-color: lightgreen;
   padding-top: var(--spacing-6-4);
-  font-size: 1.4rem;
+  font-size: 14px;
 
   a:link,
   a:visited {
@@ -17,8 +16,8 @@
     text-decoration: none;
   }
 
-  .heading:hover,
-  .heading:active {
+  a .heading:hover,
+  a .heading:active {
     color: var(--color-tertiary);
   }
 
