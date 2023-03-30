@@ -1,0 +1,62 @@
+.travel-news-two {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2.4rem;
+  font-size: 14px;
+  padding-top: var(--spacing-3-2);
+
+  &__section-a {
+    grid-column: 2 / span 10;
+    background-color: purple; /* delete */
+    height: 200px; /* delete */
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2.4rem;
+
+    &__sub-1 {
+      grid-column: span 8;
+      background-color: lightgray;
+    }
+    &__sub-2 {
+      grid-column: span 2;
+      background-color: pink;
+    }
+  }
+
+  &__section-b {
+    grid-column: 2 / span 6;
+    background-color: orange; /* delete */
+    height: 200px; /* delete */
+  }
+
+  &__section-c {
+    grid-column: span 4;
+    background-color: lightgreen; /* delete */
+    height: 200px; /* delete */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+
+    &__sub-1 {
+      grid-column: span 1;
+      background-color: lightgray;
+    }
+    &__sub-2 {
+      grid-column: span 1;
+      background-color: pink;
+    }
+  }
+
+  a:link,
+  a:visited {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  a .heading:hover,
+  a .heading:active {
+    color: var(--color-tertiary);
+  }
+}
