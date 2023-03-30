@@ -439,48 +439,36 @@ body {
   .travel-news a .heading:active {
     color: var(--color-tertiary); }
 
+.test-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 220px; }
+
 .travel-news-two {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 2.4rem;
   font-size: 14px;
   padding-top: var(--spacing-3-2); }
+  .travel-news-two__container {
+    display: flex;
+    gap: var(--spacing-0-8); }
   .travel-news-two__section-a {
-    grid-column: 2 / span 10;
-    background-color: purple;
-    /* delete */
-    height: 200px;
-    /* delete */
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 2.4rem; }
-    .travel-news-two__section-a__sub-1 {
-      grid-column: span 8;
-      background-color: lightgray; }
-    .travel-news-two__section-a__sub-2 {
-      grid-column: span 2;
-      background-color: pink; }
+    grid-column: span 6; }
+    .travel-news-two__section-a img {
+      max-width: 15rem; }
   .travel-news-two__section-b {
-    grid-column: 2 / span 6;
-    background-color: orange;
-    /* delete */
-    height: 200px;
-    /* delete */ }
-  .travel-news-two__section-c {
-    grid-column: span 4;
-    background-color: lightgreen;
-    /* delete */
-    height: 200px;
-    /* delete */
+    grid-column: span 6;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.4rem; }
-    .travel-news-two__section-c__sub-1 {
-      grid-column: span 1;
-      background-color: lightgray; }
-    .travel-news-two__section-c__sub-2 {
-      grid-column: span 1;
-      background-color: pink; }
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-2-4); }
+    .travel-news-two__section-b__sub-1 {
+      grid-column: span 1; }
+    .travel-news-two__section-b__sub-2 {
+      grid-column: span 1; }
+    .travel-news-two__section-b__sub-3 {
+      grid-column: span 1; }
   .travel-news-two a:link,
   .travel-news-two a:visited {
     color: var(--color-text);
