@@ -361,6 +361,25 @@ body {
   padding: var(--spacing-1-6);
   border-radius: 20px; }
 
+.section-heading {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-column-gap: var(--spacing-0-8);
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 400; }
+  .section-heading span {
+    background-color: var(--color-primary);
+    padding: var(--spacing-0-8);
+    border-radius: var(--border-radius-md); }
+
+.section-heading:after {
+  content: "";
+  height: 1px;
+  display: block;
+  background-color: var(--color-primary); }
+
 .hero__image {
   width: 1500px;
   display: block;
@@ -376,7 +395,7 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--spacing-2-4);
-  padding-top: var(--spacing-6-4);
+  padding-top: var(--spacing-3-2);
   font-size: 14px; }
   .travel-guides a:link,
   .travel-guides a:visited {
