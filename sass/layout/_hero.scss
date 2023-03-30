@@ -1,5 +1,33 @@
-.hero__image {
-  width: 1500px;
-  display: block;
+.hero {
+  max-width: 1200px;
+  height: 555px;
   margin: 0 auto;
+  position: relative;
+  text-align: center;
+
+  &__image {
+    object-fit: cover;
+    display: block;
+    max-width: 1200px;
+    height: 555px;
+    border-radius: var(--border-radius-md);
+  }
+
+  &__text-container {
+    // background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--color-secondary);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    padding: var(--spacing-0-8);
+    transform: translateX(-50%);
+    border-radius: var(--border-radius-md);
+  }
+
+  &__text {
+    color: white;
+    font-weight: 500;
+    font-size: 2.4rem;
+    width: 600px;
+  }
 }
