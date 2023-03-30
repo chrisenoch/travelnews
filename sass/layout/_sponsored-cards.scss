@@ -6,12 +6,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2.4rem;
+    gap: var(--spacing-2-4);
   }
 
   &__stop-flex-wrap {
     display: flex;
-    gap: 2.4rem;
+    gap: var(--spacing-2-4);
     width: 41.6rem; /* width of two small cards plus gap from sponsored-cards__container class  */
   }
 
