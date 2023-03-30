@@ -14,8 +14,16 @@
     grid-column: span 5;
     grid-row: 1 / 2;
 
+    &__img-container {
+      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
+      width: 48.6rem;
+      height: 32.4rem;
+    }
+
     img {
-      max-height: 100%;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
   }
 

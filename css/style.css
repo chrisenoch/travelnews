@@ -426,8 +426,14 @@ body {
   .travel-news__section-b {
     grid-column: span 5;
     grid-row: 1 / 2; }
+    .travel-news__section-b__img-container {
+      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
+      width: 48.6rem;
+      height: 32.4rem; }
     .travel-news__section-b img {
-      max-height: 100%; }
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
   .travel-news__section-c {
     grid-column: span 3;
     grid-row: 1 / 2; }
@@ -439,30 +445,41 @@ body {
   .travel-news a .heading:active {
     color: var(--color-tertiary); }
 
-.test-flex {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 220px; }
-
 .travel-news-two {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 2.4rem;
-  font-size: 14px;
-  padding-top: var(--spacing-3-2); }
+  gap: var(--spacing-2-4);
+  font-size: 14px; }
   .travel-news-two__container {
     display: flex;
-    gap: var(--spacing-0-8); }
+    gap: var(--spacing-0-8);
+    justify-content: start; }
   .travel-news-two__section-a {
     grid-column: span 6; }
+    .travel-news-two__section-a__img-container {
+      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
+      min-width: 23rem;
+      max-width: 23rem;
+      height: 13.8rem;
+      background-color: green; }
     .travel-news-two__section-a img {
-      max-width: 23rem; }
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
   .travel-news-two__section-b {
     grid-column: span 6;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-2-4); }
+    .travel-news-two__section-b__img-container {
+      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
+      min-width: 18rem;
+      max-width: 18rem;
+      height: 10.8rem; }
+    .travel-news-two__section-b img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
     .travel-news-two__section-b__sub-1 {
       grid-column: span 1; }
     .travel-news-two__section-b__sub-2 {
