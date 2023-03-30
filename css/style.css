@@ -457,7 +457,7 @@ body {
   .travel-news-two__section-a {
     grid-column: span 6; }
     .travel-news-two__section-a img {
-      max-width: 15rem; }
+      max-width: 23rem; }
   .travel-news-two__section-b {
     grid-column: span 6;
     display: grid;
