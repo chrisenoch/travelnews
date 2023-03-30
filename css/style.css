@@ -427,8 +427,6 @@ body {
     grid-column: span 5;
     grid-row: 1 / 2; }
     .travel-news__section-b__img-container {
-      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
-      width: 48.6rem;
       height: 32.4rem; }
     .travel-news__section-b img {
       object-fit: cover;
