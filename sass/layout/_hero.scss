@@ -10,14 +10,15 @@
     display: block;
     max-width: 1200px;
     height: 555px;
-    border-radius: var(--border-radius-md);
+    border-bottom-right-radius: var(--border-radius-md);
+    border-bottom-left-radius: var(--border-radius-md);
   }
 
   &__text-container {
     // background-color: rgba(0, 0, 0, 0.7);
     background-color: var(--color-secondary);
     position: absolute;
-    bottom: 10px;
+    bottom: -40px;
     left: 50%;
     padding: var(--spacing-0-8);
     transform: translateX(-50%);
