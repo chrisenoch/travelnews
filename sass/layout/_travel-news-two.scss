@@ -8,10 +8,17 @@
     display: flex;
     gap: var(--spacing-0-8);
     justify-content: start;
+    padding-bottom: var(--spacing-2-4);
   }
 
   &__section-a {
     grid-column: span 6;
+
+    h4 {
+      @include t-2-0;
+      padding: var(--spacing-0-4) 0;
+      font-family: "Andada Pro", serif;
+    }
 
     &__img-container {
       /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
@@ -41,6 +48,12 @@
       max-width: 18rem;
       height: 10.8rem;
       border-radius: var(--border-radius-md);
+    }
+
+    h4 {
+      @include t-2-0;
+      padding: var(--spacing-0-4) 0;
+      font-family: "Andada Pro", serif;
     }
 
     img {

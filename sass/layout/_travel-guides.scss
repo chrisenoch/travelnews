@@ -34,6 +34,12 @@
     background-color: var(--color-navbar-border);
     border-bottom-right-radius: var(--border-radius-md);
     border-bottom-left-radius: var(--border-radius-md);
+
+    h3 {
+      @include t-4-0;
+      padding-bottom: var(--spacing-1-6);
+      font-family: "Andada Pro", serif;
+    }
   }
 
   &__section-b {
@@ -62,6 +68,18 @@
     > article {
       padding-left: var(--spacing-0-8);
     }
+
+    p {
+      @include respond(tab-land) {
+        display: none;
+      }
+    }
+
+    h3 {
+      font-family: "Andada Pro", serif;
+      @include t-2-0;
+      padding-bottom: var(--spacing-0-8);
+    }
   }
 
   &__section-c {
@@ -71,6 +89,12 @@
       max-height: 16rem;
       object-fit: cover;
       border-radius: var(--border-radius-md);
+    }
+
+    h3 {
+      padding-bottom: var(--spacing-0-8);
+      font-family: "Andada Pro", serif;
+      @include t-2-0;
     }
   }
 }

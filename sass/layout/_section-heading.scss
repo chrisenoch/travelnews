@@ -1,4 +1,5 @@
 .section-heading {
+  padding-top: var(--spacing-9-6);
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-column-gap: var(--spacing-0-8);
