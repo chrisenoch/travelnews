@@ -1,6 +1,6 @@
 .sponsored-cards {
   padding-top: var(--spacing-3-2);
-  font-size: 14px;
+  @include t-1-4;
 
   &__container {
     display: flex;
@@ -47,7 +47,7 @@
   &__destination {
     color: white;
     font-weight: 700;
-    font-size: 18px;
+    @include t-1-8;
     text-shadow: 0.2px 0.2px 0.2px black;
     position: absolute;
     top: 16px;

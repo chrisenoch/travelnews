@@ -1,13 +1,9 @@
-// .test {
-//   grid-column: span 6;
-// }
-
 .travel-guides {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--spacing-2-4);
   padding-top: var(--spacing-3-2);
-  font-size: 14px;
+  @include t-1-4;
 
   a:link,
   a:visited {

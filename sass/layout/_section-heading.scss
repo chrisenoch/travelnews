@@ -3,7 +3,7 @@
   grid-template-columns: max-content 1fr;
   grid-column-gap: var(--spacing-0-8);
   align-items: center;
-  font-size: 2rem;
+  @include t-2-0;
   color: white;
   font-weight: 400;
   // font-family: "Andada Pro";

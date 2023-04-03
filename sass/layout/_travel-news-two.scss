@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--spacing-2-4);
-  font-size: 14px;
+  @include t-1-4;
 
   &__container {
     display: flex;
