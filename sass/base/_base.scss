@@ -78,14 +78,27 @@ button {
   cursor: pointer;
 }
 
+// a:link,
+// a:visited {
+//   color: var(--color-text);
+//   text-decoration: none;
+// }
+
+// a:hover,
+// a:active {
+//   color: var(--color-tertiary);
+// }
+
 a:link,
-a:visited {
-  color: var(--color-text);
+a:visited,
+a:hover,
+a:active {
+  color: currentColor;
   text-decoration: none;
 }
 
-a:hover,
-a:active {
+.show-hover:hover,
+.show-hover:active {
   color: var(--color-tertiary);
 }
 

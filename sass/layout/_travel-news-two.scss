@@ -14,7 +14,7 @@
   &__section-a {
     grid-column: span 6;
 
-    h4 {
+    h3 {
       @include t-2-0;
       padding-bottom: var(--spacing-0-4);
       font-family: "Andada Pro", serif;
@@ -50,7 +50,7 @@
       border-radius: var(--border-radius-md);
     }
 
-    h4 {
+    h3 {
       @include t-2-0;
       padding: var(--spacing-0-4) 0;
       font-family: "Andada Pro", serif;
@@ -72,16 +72,5 @@
     &__sub-3 {
       grid-column: span 1;
     }
-  }
-
-  a:link,
-  a:visited {
-    color: var(--color-text);
-    text-decoration: none;
-  }
-
-  a .heading:hover,
-  a .heading:active {
-    color: var(--color-tertiary);
   }
 }

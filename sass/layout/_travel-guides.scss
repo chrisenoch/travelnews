@@ -5,17 +5,6 @@
   padding-top: var(--spacing-3-2);
   @include t-1-4;
 
-  a:link,
-  a:visited {
-    color: var(--color-text);
-    text-decoration: none;
-  }
-
-  a .heading:hover,
-  a .heading:active {
-    color: var(--color-tertiary);
-  }
-
   &__section-a {
     text-align: center;
     grid-column: span 6;
@@ -39,6 +28,16 @@
       @include t-4-0;
       padding-bottom: var(--spacing-1-6);
       font-family: "Andada Pro", serif;
+
+      @include respond(tab-land) {
+        @include t-3-2;
+      }
+    }
+
+    p {
+      @include respond(tab-port) {
+        display: none;
+      }
     }
   }
 
@@ -79,6 +78,14 @@
       font-family: "Andada Pro", serif;
       @include t-2-0;
       padding-bottom: var(--spacing-0-8);
+
+      @include respond(tab-land) {
+        @include t-1-8;
+      }
+
+      @include respond(tab-port) {
+        @include t-1-6;
+      }
     }
   }
 
@@ -95,6 +102,14 @@
       padding-bottom: var(--spacing-0-8);
       font-family: "Andada Pro", serif;
       @include t-2-0;
+
+      @include respond(tab-land) {
+        @include t-1-8;
+      }
+
+      @include respond(tab-port) {
+        @include t-1-6;
+      }
     }
   }
 }
