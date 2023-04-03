@@ -541,7 +541,7 @@ body {
     .travel-news-two__section-a h4 {
       font-size: 2rem;
       line-height: 1.4;
-      padding: var(--spacing-0-4) 0;
+      padding-bottom: var(--spacing-0-4);
       font-family: "Andada Pro", serif; }
     .travel-news-two__section-a__img-container {
       /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
