@@ -9,8 +9,8 @@
     gap: var(--spacing-1-6);
     // grid-template-columns: repeat(auto-fit, minmax(10px, 28px));
     // grid-template-columns: repeat(auto-fit, 28px);
-    grid-template-columns: repeat(8, 12.5%);
-    grid-template-columns: repeat(8, minmax(30px, 45px));
+    // grid-template-columns: repeat(8, 12.5%);
+    // grid-template-columns: repeat(8, minmax(30px, 45px));
     grid-template-columns: repeat(8, 1fr);
   }
 
@@ -51,9 +51,9 @@
         @include respond(tab-land) {
           @include t-3-2;
         }
-        // @include respond(phone) {
-        //   @include t-2-4;
-        // }
+        @include respond(phone) {
+          @include t-2-4;
+        }
       }
 
       p {
