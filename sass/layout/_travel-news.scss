@@ -20,11 +20,20 @@
 
     &__sub-1 {
       grid-column: span 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       @include respond(tab-land) {
         grid-column: 1 / 7;
         grid-column: span 12;
         grid-row: 1 / 2;
+      }
+
+      p {
+        @include respond(tab-port) {
+          display: none;
+        }
       }
     }
 
@@ -53,23 +62,15 @@
     }
 
     &__title--main {
-      @include t-2-4;
       @include t-3-2;
+      @include respond(tab-port) {
+        @include t-2-4;
+      }
     }
 
-    // &__title--secondary {
-    //   @include t-2-0;
-
-    //   @include respond(tab-land) {
-    //     display: none;
-    //   }
-    // }
-
-    // &__paragraph--secondary {
-    //   @include respond(tab-land) {
-    //     display: none;
-    //   }
-    // }
+    &__title--secondary {
+      @include t-1-6;
+    }
 
     p {
       padding-bottom: var(--spacing-2-4);
@@ -98,6 +99,28 @@
 
     h3:not(:last-child) {
       padding-bottom: var(--spacing-2-4);
+
+      @include respond(tab-port) {
+        padding-bottom: var(--spacing-1-6);
+      }
+    }
+
+    &__title {
+      font-family: "Andada Pro", serif;
+      padding-bottom: var(--spacing-0-4);
+    }
+
+    &__title--main {
+      @include t-3-2;
+    }
+
+    &__title--secondary {
+      @include t-1-6;
+      display: none;
+
+      @include respond(tab-land) {
+        display: block;
+      }
     }
   }
 }
