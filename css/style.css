@@ -531,12 +531,15 @@ body {
       grid-gap: var(--spacing-0-8); }
       @media only screen and (max-width: 37.5em) {
         .travel-guides__section-c__sub-1 {
-          grid-template-columns: minmax(auto-fit, 1fr); } }
+          grid-template-columns: repeat(auto-fit, 1fr);
+          grid-template-columns: repeat(auto-fit, minmax(200px, auto)); } }
     .travel-guides__section-c img {
       grid-column: span 2;
       max-height: 16rem;
       width: 28.2rem;
+      width: 100%;
       object-fit: cover;
+      object-position: 50% 20%;
       border-radius: var(--border-radius-md); }
       @media only screen and (max-width: 37.5em) {
         .travel-guides__section-c img {
