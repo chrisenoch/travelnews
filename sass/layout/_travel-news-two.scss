@@ -3,6 +3,7 @@
   grid-template-columns: repeat(12, 1fr);
   gap: var(--spacing-2-4);
   @include t-1-4;
+  padding-top: var(--spacing-2-4);
 
   &__container {
     display: flex;
