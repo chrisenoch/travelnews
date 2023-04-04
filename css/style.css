@@ -440,16 +440,19 @@ body {
   font-size: clamp(14px, 1.4rem, 1.4rem); }
   @media only screen and (max-width: 37.5em) {
     .travel-guides {
-      grid-template-columns: repeat(auto-fit, minmax(10px, 28px));
-      grid-template-columns: repeat(auto-fit, 28px);
-      grid-template-columns: repeat(8, 12.5%); } }
+      gap: var(--spacing-1-6);
+      grid-template-columns: repeat(8, 12.5%);
+      grid-template-columns: repeat(8, minmax(30px, 45px));
+      grid-template-columns: repeat(8, 1fr); } }
   .travel-guides__section-a {
     text-align: center;
     grid-column: span 6; }
     .travel-guides__section-a img {
       display: block;
       object-fit: cover;
-      background-position: center;
+      height: 33rem;
+      width: 100%;
+      object-position: center;
       border-top-right-radius: var(--border-radius-md);
       border-top-left-radius: var(--border-radius-md); }
     @media only screen and (max-width: 37.5em) {
@@ -461,6 +464,9 @@ body {
     background-color: var(--color-navbar-border);
     border-bottom-right-radius: var(--border-radius-md);
     border-bottom-left-radius: var(--border-radius-md); }
+    @media only screen and (max-width: 56.25em) {
+      .travel-guides__article-a {
+        padding: var(--spacing-2-4) var(--spacing-2-4); } }
     .travel-guides__article-a h3 {
       font-size: 4rem;
       font-size: clamp(32px, 4rem, 4rem);
@@ -489,7 +495,9 @@ body {
     .travel-guides__section-b img {
       grid-column: 1 / 3;
       object-fit: cover;
-      background-position: center;
+      object-position: center;
+      width: 17.7rem;
+      height: 11.8rem;
       border-radius: var(--border-radius-md); }
   .travel-guides__article-b {
     grid-column: 3 / 7; }
@@ -516,8 +524,7 @@ body {
     grid-column: span 3; }
     @media only screen and (max-width: 37.5em) {
       .travel-guides__section-c {
-        grid-column: span 8;
-        grid-row: 3 / 4; } }
+        grid-column: span 8; } }
     .travel-guides__section-c img {
       max-height: 16rem;
       object-fit: cover;
