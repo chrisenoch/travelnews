@@ -676,8 +676,8 @@ body {
       grid-gap: var(--spacing-0-8); }
       @media only screen and (max-width: 37.5em) {
         .travel-guides__section-c__sub-1 {
-          grid-template-columns: repeat(auto-fit, 1fr);
-          grid-template-columns: repeat(auto-fit, minmax(200px, auto)); } }
+          display: flex;
+          flex-wrap: wrap; } }
     .travel-guides__section-c img {
       grid-column: span 2;
       max-height: 16rem;
