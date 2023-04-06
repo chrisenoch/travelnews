@@ -94,9 +94,9 @@
     @include respond(phone) {
       grid-column: span 12;
       display: grid;
-      gap: var(--spacing-2-4);
+
       grid-template-columns: repeat(2, 1fr);
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
 
     h3 {
