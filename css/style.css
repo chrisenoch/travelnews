@@ -950,6 +950,10 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     padding: 0 var(--spacing-0-4);
     border-radius: 5px; }
+    @media only screen and (max-width: 37.5em) {
+      .sponsored-cards__destination {
+        font-size: 1.6rem;
+        font-size: clamp(16px, 1.6rem, 1.6rem); } }
   .sponsored-cards__price {
     color: white;
     font-weight: 700;
