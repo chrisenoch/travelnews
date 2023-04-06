@@ -30,13 +30,13 @@
         }
       }
     }
-    &__show-on-tab-land {
-      display: none;
+    // &__show-on-tab-land {
+    //   display: none;
 
-      @include respond(tab-land) {
-        display: flex;
-      }
-    }
+    //   @include respond(tab-land) {
+    //     display: flex;
+    //   }
+    // }
 
     &__title-long {
       display: none;

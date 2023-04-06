@@ -202,60 +202,117 @@ body {
 
 /* start showing from tab-land and continue to show for screens smaller than tab-land */
 .show-tab-land {
-  display: none; }
+  display: none !important; }
   @media only screen and (max-width: 75em) {
     .show-tab-land {
-      display: block; } }
+      display: block !important; } }
 
 /* start showing from tab-port and continue to show for screens smaller than tab-port */
 .show-tab-port {
-  display: none; }
+  display: none !important; }
   @media only screen and (max-width: 56.25em) {
     .show-tab-port {
-      display: block; } }
+      display: block !important; } }
 
 /* start showing from phone and continue to show for screens smaller than phone */
 .show-phone {
-  display: none; }
+  display: none !important; }
   @media only screen and (max-width: 37.5em) {
     .show-phone {
-      display: block; } }
+      display: block !important; } }
 
 .show-only-tab-port {
-  display: none; }
+  display: none !important; }
   @media only screen and (max-width: 75em) {
     .show-only-tab-port {
-      display: none; } }
+      display: none !important; } }
   @media only screen and (max-width: 56.25em) {
     .show-only-tab-port {
-      display: block; } }
+      display: block !important; } }
   @media only screen and (max-width: 37.5em) {
     .show-only-tab-port {
-      display: none; } }
+      display: none !important; } }
 
 .show-only-tab-land {
-  display: none; }
+  display: none !important; }
   @media only screen and (max-width: 75em) {
     .show-only-tab-land {
-      display: block; } }
+      display: block !important; } }
   @media only screen and (max-width: 56.25em) {
     .show-only-tab-land {
-      display: none; } }
+      display: none !important; } }
   @media only screen and (max-width: 37.5em) {
     .show-only-tab-land {
-      display: none; } }
+      display: none !important; } }
 
 .show-only-phone {
-  display: none; }
+  display: none !important; }
   @media only screen and (max-width: 75em) {
     .show-only-phone {
-      display: none; } }
+      display: none !important; } }
   @media only screen and (max-width: 56.25em) {
     .show-only-phone {
-      display: none; } }
+      display: none !important; } }
   @media only screen and (max-width: 37.5em) {
     .show-only-phone {
-      display: block; } }
+      display: block !important; } }
+
+/* start showing from tab-land and continue to show for screens smaller than tab-land */
+.show-tab-land-flex {
+  display: none !important; }
+  @media only screen and (max-width: 75em) {
+    .show-tab-land-flex {
+      display: flex !important; } }
+
+/* start showing from tab-port and continue to show for screens smaller than tab-port */
+.show-tab-port-flex {
+  display: none !important; }
+  @media only screen and (max-width: 56.25em) {
+    .show-tab-port-flex {
+      display: flex !important; } }
+
+/* start showing from phone and continue to show for screens smaller than phone */
+.show-phone-flex {
+  display: none !important; }
+  @media only screen and (max-width: 37.5em) {
+    .show-phone-flex {
+      display: flex !important; } }
+
+.show-only-tab-port-flex {
+  display: none !important; }
+  @media only screen and (max-width: 75em) {
+    .show-only-tab-port-flex {
+      display: none !important; } }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-tab-port-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 37.5em) {
+    .show-only-tab-port-flex {
+      display: none !important; } }
+
+.show-only-tab-land-flex {
+  display: none !important; }
+  @media only screen and (max-width: 75em) {
+    .show-only-tab-land-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-tab-land-flex {
+      display: none !important; } }
+  @media only screen and (max-width: 37.5em) {
+    .show-only-tab-land-flex {
+      display: none !important; } }
+
+.show-only-phone-flex {
+  display: none !important; }
+  @media only screen and (max-width: 75em) {
+    .show-only-phone-flex {
+      display: none !important; } }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-phone-flex {
+      display: none !important; } }
+  @media only screen and (max-width: 37.5em) {
+    .show-only-phone-flex {
+      display: flex !important; } }
 
 .mt-0-2 {
   margin-top: 0.2rem; }
@@ -781,11 +838,6 @@ body {
           flex-direction: column; }
           .travel-news-two__section-a__container p {
             display: none; } }
-    .travel-news-two__section-a__show-on-tab-land {
-      display: none; }
-      @media only screen and (max-width: 75em) {
-        .travel-news-two__section-a__show-on-tab-land {
-          display: flex; } }
     .travel-news-two__section-a__title-long {
       display: none; }
     .travel-news-two__section-a h3 {
