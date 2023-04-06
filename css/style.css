@@ -173,6 +173,90 @@ body {
   width: -4rem;
   border-radius: 50%; }
 
+.display-block {
+  display: block !important; }
+
+.display-inline-block {
+  display: inline-block !important; }
+
+.display-flex {
+  display: flex !important; }
+
+.display-none {
+  display: none !important; }
+
+/* start hiding from tab-land and continue to hide for screens smaller than tab-land */
+@media only screen and (max-width: 75em) {
+  .hide-tab-land {
+    display: none; } }
+
+/* start hiding from tab-port and continue to hide for screens smaller than tab-port */
+@media only screen and (max-width: 56.25em) {
+  .hide-tab-port {
+    display: none; } }
+
+/* start hiding from phone and continue to hide for screens smaller than phone */
+@media only screen and (max-width: 37.5em) {
+  .hide-phone {
+    display: none; } }
+
+/* start showing from tab-land and continue to show for screens smaller than tab-land */
+.show-tab-land {
+  display: none; }
+  @media only screen and (max-width: 75em) {
+    .show-tab-land {
+      display: block; } }
+
+/* start showing from tab-port and continue to show for screens smaller than tab-port */
+.show-tab-port {
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .show-tab-port {
+      display: block; } }
+
+/* start showing from phone and continue to show for screens smaller than phone */
+.show-phone {
+  display: none; }
+  @media only screen and (max-width: 37.5em) {
+    .show-phone {
+      display: block; } }
+
+.show-only-tab-port {
+  display: none; }
+  @media only screen and (max-width: 75em) {
+    .show-only-tab-port {
+      display: none; } }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-tab-port {
+      display: block; } }
+  @media only screen and (max-width: 37.5em) {
+    .show-only-tab-port {
+      display: none; } }
+
+.show-only-tab-land {
+  display: none; }
+  @media only screen and (max-width: 75em) {
+    .show-only-tab-land {
+      display: block; } }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-tab-land {
+      display: none; } }
+  @media only screen and (max-width: 37.5em) {
+    .show-only-tab-land {
+      display: none; } }
+
+.show-only-phone {
+  display: none; }
+  @media only screen and (max-width: 75em) {
+    .show-only-phone {
+      display: none; } }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-phone {
+      display: none; } }
+  @media only screen and (max-width: 37.5em) {
+    .show-only-phone {
+      display: block; } }
+
 .mt-0-2 {
   margin-top: 0.2rem; }
 
@@ -429,7 +513,8 @@ body {
 .page-container {
   max-width: 1220px;
   padding: 0 10px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 3000px; }
 
 .travel-guides {
   display: grid;
@@ -643,14 +728,19 @@ body {
       font-family: "Andada Pro", serif;
       font-size: 1.6rem;
       font-size: clamp(16px, 1.6rem, 1.6rem); }
+      @media only screen and (max-width: 75em) {
+        .travel-news__section-c h3 {
+          font-size: 1.8rem;
+          font-size: clamp(18px, 1.8rem, 1.8rem); } }
+      @media only screen and (max-width: 56.25em) {
+        .travel-news__section-c h3 {
+          font-size: 1.6rem;
+          font-size: clamp(16px, 1.6rem, 1.6rem); } }
     .travel-news__section-c h3:not(:last-child) {
       padding-bottom: var(--spacing-2-4); }
       @media only screen and (max-width: 56.25em) {
         .travel-news__section-c h3:not(:last-child) {
           padding-bottom: var(--spacing-1-6); } }
-    @media only screen and (max-width: 37.5em) {
-      .travel-news__section-c h3:last-child {
-        display: none; } }
     .travel-news__section-c__title {
       font-family: "Andada Pro", serif;
       padding-bottom: var(--spacing-0-4); }
@@ -672,32 +762,60 @@ body {
   font-size: 1.4rem;
   font-size: clamp(14px, 1.4rem, 1.4rem);
   padding-top: var(--spacing-2-4); }
-  .travel-news-two__container {
-    display: flex;
-    gap: var(--spacing-0-8);
-    justify-content: start;
-    padding-bottom: var(--spacing-2-4); }
   .travel-news-two__section-a {
     grid-column: span 6; }
+    @media only screen and (max-width: 75em) {
+      .travel-news-two__section-a {
+        grid-column: span 12;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, minmax(73.57px, 1fr));
+        gap: var(--spacing-2-4); } }
+    .travel-news-two__section-a__container {
+      display: flex;
+      gap: var(--spacing-0-8);
+      justify-content: start;
+      padding-bottom: var(--spacing-2-4); }
+      @media only screen and (max-width: 75em) {
+        .travel-news-two__section-a__container {
+          flex-direction: column; }
+          .travel-news-two__section-a__container p {
+            display: none; } }
+    .travel-news-two__section-a__show-on-tab-land {
+      display: none; }
+      @media only screen and (max-width: 75em) {
+        .travel-news-two__section-a__show-on-tab-land {
+          display: flex; } }
+    .travel-news-two__section-a__title-long {
+      display: none; }
     .travel-news-two__section-a h3 {
       font-size: 2rem;
       font-size: clamp(20px, 2rem, 2rem);
       line-height: 1.4;
       padding-bottom: var(--spacing-0-4);
       font-family: "Andada Pro", serif; }
+      @media only screen and (max-width: 75em) {
+        .travel-news-two__section-a h3 {
+          font-size: 1.8rem;
+          font-size: clamp(18px, 1.8rem, 1.8rem); } }
     .travel-news-two__section-a img {
       object-fit: cover;
       object-position: center;
       /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
       min-width: 23rem;
       max-width: 23rem;
-      height: 13.8rem;
+      max-height: 13.8rem;
       border-radius: var(--border-radius-md); }
+      @media only screen and (max-width: 75em) {
+        .travel-news-two__section-a img {
+          max-width: 100%;
+          max-height: 16rem;
+          min-width: 0px; } }
   .travel-news-two__section-b {
     grid-column: span 6;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-2-4); }
+    gap: var(--spacing-1-6); }
     .travel-news-two__section-b img {
       object-fit: cover;
       object-position: center;
@@ -712,8 +830,15 @@ body {
       line-height: 1.4;
       padding: var(--spacing-0-4) 0;
       font-family: "Andada Pro", serif; }
+      @media only screen and (max-width: 75em) {
+        .travel-news-two__section-b h3 {
+          font-size: 1.8rem;
+          font-size: clamp(18px, 1.8rem, 1.8rem); } }
     .travel-news-two__section-b__sub-1 {
       grid-column: span 1; }
+      @media only screen and (max-width: 75em) {
+        .travel-news-two__section-b__sub-1 p {
+          display: none; } }
 
 .sponsored-cards {
   padding-top: var(--spacing-1-6);

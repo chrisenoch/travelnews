@@ -13,6 +13,165 @@
   border-radius: 50%;
 }
 
+.display-block {
+  display: block !important;
+}
+.display-inline-block {
+  display: inline-block !important;
+}
+.display-flex {
+  display: flex !important;
+}
+.display-none {
+  display: none !important;
+}
+
+/* start hiding from tab-land and continue to hide for screens smaller than tab-land */
+.hide-tab-land {
+  @include respond(tab-land) {
+    display: none;
+  }
+}
+
+/* start hiding from tab-port and continue to hide for screens smaller than tab-port */
+.hide-tab-port {
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+/* start hiding from phone and continue to hide for screens smaller than phone */
+.hide-phone {
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+/* start showing from tab-land and continue to show for screens smaller than tab-land */
+.show-tab-land {
+  display: none;
+  @include respond(tab-land) {
+    display: block;
+  }
+}
+
+/* start showing from tab-port and continue to show for screens smaller than tab-port */
+.show-tab-port {
+  display: none;
+  @include respond(tab-port) {
+    display: block;
+  }
+}
+
+/* start showing from phone and continue to show for screens smaller than phone */
+.show-phone {
+  display: none;
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.show-only-tab-port {
+  display: none;
+  @include respond(tab-land) {
+    display: none;
+  }
+  @include respond(tab-port) {
+    display: block;
+  }
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.show-only-tab-land {
+  display: none;
+  @include respond(tab-land) {
+    display: block;
+  }
+  @include respond(tab-port) {
+    display: none;
+  }
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.show-only-phone {
+  display: none;
+  @include respond(tab-land) {
+    display: none;
+  }
+  @include respond(tab-port) {
+    display: none;
+  }
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+// /* start showing from tab-land and continue to show for screens smaller than tab-land */
+// .show-tab-land-flex {
+//   display: none;
+//   @include respond(tab-land) {
+//     display: flex;
+//   }
+// }
+
+// /* start showing from tab-port and continue to show for screens smaller than tab-port */
+// .show-tab-port-flex {
+//   display: none;
+//   @include respond(tab-port) {
+//     display: flex;
+//   }
+// }
+
+// /* start showing from phone and continue to show for screens smaller than phone */
+// .show-phone-flex {
+//   display: none;
+//   @include respond(phone) {
+//     display: flex;
+//   }
+// }
+
+// .show-only-tab-port-flex {
+//   display: none;
+//   @include respond(tab-land) {
+//     display: none;
+//   }
+//   @include respond(tab-port) {
+//     display: flex;
+//   }
+//   @include respond(phone) {
+//     display: none;
+//   }
+// }
+
+// .show-only-tab-land-flex {
+//   display: none;
+//   @include respond(tab-land) {
+//     display: flex;
+//   }
+//   @include respond(tab-port) {
+//     display: none;
+//   }
+//   @include respond(phone) {
+//     display: none;
+//   }
+// }
+
+// .show-only-phone-flex {
+//   display: none;
+//   @include respond(tab-land) {
+//     display: none;
+//   }
+//   @include respond(tab-port) {
+//     display: none;
+//   }
+//   @include respond(phone) {
+//     display: flex;
+//   }
+// }
 .mt-0-2 {
   margin-top: 0.2rem;
 }
