@@ -1,5 +1,6 @@
 .hamburger {
-  //   position: relative;
+  position: fixed;
+  z-index: 20;
 
   &__icon {
     position: relative;
@@ -46,6 +47,7 @@
     background-color: rgba(var(--color-headline), 0.9);
     background-color: rgba(33, 33, 33, 0.9);
     background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     // background-color: rgb(4, 16, 56);
     color: white;
   }
