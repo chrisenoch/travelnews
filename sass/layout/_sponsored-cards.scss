@@ -1,12 +1,13 @@
 .sponsored-cards {
-  padding-top: var(--spacing-3-2);
-  font-size: 14px;
+  padding-top: var(--spacing-1-6);
+  @include t-1-4;
 
   &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-2-4);
+    padding-top: var(--spacing-2-4);
   }
 
   &__stop-flex-wrap {
@@ -47,7 +48,7 @@
   &__destination {
     color: white;
     font-weight: 700;
-    font-size: 18px;
+    @include t-1-8;
     text-shadow: 0.2px 0.2px 0.2px black;
     position: absolute;
     top: 16px;
@@ -55,6 +56,10 @@
     background-color: rgba(0, 0, 0, 0.3);
     padding: 0 var(--spacing-0-4);
     border-radius: 5px;
+
+    @include respond(phone) {
+      @include t-1-6;
+    }
   }
 
   &__price {

@@ -2,30 +2,75 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--spacing-2-4);
-  font-size: 14px;
-
-  &__container {
-    display: flex;
-    gap: var(--spacing-0-8);
-    justify-content: start;
-  }
+  @include t-1-4;
+  padding-top: var(--spacing-2-4);
 
   &__section-a {
     grid-column: span 6;
 
-    &__img-container {
-      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
-      min-width: 23rem;
-      max-width: 23rem;
-      height: 13.8rem;
-      border-radius: var(--border-radius-md);
+    @include respond(tab-land) {
+      grid-column: span 12;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(73.57px, 1fr));
+      // grid-template-columns: repeat(4, minmax(13.7rem, 28.2rem));
+      gap: var(--spacing-2-4);
+    }
+
+    @include respond(phone) {
+      grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+      gap: var(--spacing-1-6);
+    }
+
+    &__container {
+      display: flex;
+      gap: var(--spacing-0-8);
+      justify-content: start;
+      padding-bottom: var(--spacing-2-4);
+
+      @include respond(tab-land) {
+        flex-direction: column;
+        p {
+          display: none;
+        }
+      }
+
+      @include respond(phone) {
+        padding-bottom: 0;
+      }
+    }
+
+    &__title-long {
+      display: none;
+    }
+
+    h3 {
+      @include t-2-0;
+      padding-bottom: var(--spacing-0-4);
+      font-family: "Andada Pro", serif;
+
+      @include respond(tab-land) {
+        @include t-1-8;
+      }
+      @include respond(phone) {
+        @include t-1-6;
+      }
     }
 
     img {
       object-fit: cover;
-      width: 100%;
-      height: 100%;
+      object-position: center;
+      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
+      min-width: 23rem;
+      max-width: 23rem;
+      max-height: 13.8rem;
       border-radius: var(--border-radius-md);
+
+      @include respond(tab-land) {
+        max-width: 100%;
+        height: 16rem;
+        min-width: 0px;
+      }
     }
   }
 
@@ -33,9 +78,11 @@
     grid-column: span 6;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-2-4);
+    gap: var(--spacing-1-6);
 
-    &__img-container {
+    img {
+      object-fit: cover;
+      object-position: center;
       /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
       min-width: 18rem;
       max-width: 18rem;
@@ -43,32 +90,31 @@
       border-radius: var(--border-radius-md);
     }
 
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      border-radius: var(--border-radius-md);
+    h3 {
+      @include t-2-0;
+      padding: var(--spacing-0-4) 0;
+      font-family: "Andada Pro", serif;
+
+      @include respond(tab-land) {
+        @include t-1-8;
+      }
     }
 
     &__sub-1 {
       grid-column: span 1;
-    }
-    &__sub-2 {
-      grid-column: span 1;
-    }
-    &__sub-3 {
-      grid-column: span 1;
-    }
-  }
 
-  a:link,
-  a:visited {
-    color: var(--color-text);
-    text-decoration: none;
-  }
+      p {
+        @include respond(tab-land) {
+          display: none;
+        }
+      }
+    }
 
-  a .heading:hover,
-  a .heading:active {
-    color: var(--color-tertiary);
+    // &__sub-2 {
+    //   grid-column: span 1;
+    // }
+    // &__sub-3 {
+    //   grid-column: span 1;
+    // }
   }
 }

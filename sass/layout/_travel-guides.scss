@@ -1,23 +1,17 @@
-// .test {
-//   grid-column: span 6;
-// }
-
 .travel-guides {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--spacing-2-4);
   padding-top: var(--spacing-3-2);
-  font-size: 14px;
+  @include t-1-4;
 
-  a:link,
-  a:visited {
-    color: var(--color-text);
-    text-decoration: none;
-  }
-
-  a .heading:hover,
-  a .heading:active {
-    color: var(--color-tertiary);
+  @include respond(phone) {
+    gap: var(--spacing-1-6);
+    // grid-template-columns: repeat(auto-fit, minmax(10px, 28px));
+    // grid-template-columns: repeat(auto-fit, 28px);
+    // grid-template-columns: repeat(8, 12.5%);
+    // grid-template-columns: repeat(8, minmax(30px, 45px));
+    grid-template-columns: repeat(8, 1fr);
   }
 
   &__section-a {
@@ -27,17 +21,47 @@
     img {
       display: block;
       object-fit: cover;
-      background-position: center;
+      max-height: 33rem;
+      width: 100%;
+      object-position: center;
       border-top-right-radius: var(--border-radius-md);
       border-top-left-radius: var(--border-radius-md);
     }
-  }
 
-  &__article-a {
-    padding: var(--spacing-2-4) var(--spacing-6-4);
-    background-color: var(--color-navbar-border);
-    border-bottom-right-radius: var(--border-radius-md);
-    border-bottom-left-radius: var(--border-radius-md);
+    @include respond(phone) {
+      grid-column: span 8;
+      grid-row: 1 / 2;
+    }
+
+    &__sub-1 {
+      padding: var(--spacing-2-4) var(--spacing-6-4);
+      background-color: var(--color-navbar-border);
+      border-bottom-right-radius: var(--border-radius-md);
+      border-bottom-left-radius: var(--border-radius-md);
+
+      @include respond(tab-port) {
+        padding: var(--spacing-2-4) var(--spacing-2-4);
+      }
+
+      h3 {
+        @include t-4-0;
+        padding-bottom: var(--spacing-1-6);
+        font-family: "Andada Pro", serif;
+
+        @include respond(tab-land) {
+          @include t-3-2;
+        }
+        @include respond(phone) {
+          @include t-2-4;
+        }
+      }
+
+      p {
+        @include respond(tab-port) {
+          display: none;
+        }
+      }
+    }
   }
 
   &__section-b {
@@ -45,6 +69,11 @@
     gap: var(--spacing-2-4);
     grid-column: span 6;
     align-content: start;
+
+    @include respond(phone) {
+      grid-column: span 8;
+      grid-row: 2 / 3;
+    }
 
     &__container {
       display: grid;
@@ -54,27 +83,90 @@
     img {
       grid-column: 1 / 3;
       object-fit: cover;
-      background-position: center;
+      object-position: center;
+      width: 17.7rem;
+      height: 11.8rem;
       border-radius: var(--border-radius-md);
-      // height: 100%;
     }
-  }
 
-  &__article-b {
-    grid-column: 3 / 7;
+    &__sub-1 {
+      grid-column: 3 / 7;
 
-    > article {
-      padding-left: var(--spacing-0-8);
+      > article {
+        padding-left: var(--spacing-0-8);
+      }
+
+      p {
+        @include respond(tab-land) {
+          display: none;
+        }
+      }
+
+      h3 {
+        font-family: "Andada Pro", serif;
+        @include t-2-0;
+        padding-bottom: var(--spacing-0-8);
+
+        @include respond(tab-land) {
+          @include t-1-8;
+        }
+
+        @include respond(tab-port) {
+          @include t-1-6;
+        }
+      }
     }
   }
 
   &__section-c {
     grid-column: span 3;
 
+    @include respond(phone) {
+      grid-column: span 8;
+    }
+
+    &__sub-1 {
+      display: grid;
+      grid-template-columns: minmax(13.7rem, 28.2rem) 1fr;
+      grid-gap: var(--spacing-0-8);
+
+      @include respond(phone) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
     img {
+      grid-column: span 2;
       max-height: 16rem;
+      width: 28.2rem;
+      width: 100%;
+
       object-fit: cover;
+      object-position: 50% 20%;
       border-radius: var(--border-radius-md);
+
+      @include respond(phone) {
+        grid-column: span 1;
+      }
+    }
+
+    h3 {
+      padding-bottom: var(--spacing-0-8);
+      font-family: "Andada Pro", serif;
+      @include t-2-0;
+
+      @include respond(tab-land) {
+        @include t-1-8;
+      }
+
+      @include respond(tab-port) {
+        @include t-1-6;
+      }
+
+      @include respond(phone) {
+        grid-column: span 1;
+      }
     }
   }
 }

@@ -15,22 +15,56 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet" />
+      <script defer src="js/hamburger.js"></script>
   </head>
   <body>
     <header>
+      <nav class="hamburger">
+        <div class="hamburger__button">
+          <span class="hamburger__icon">&nbsp;</span>
+        </div>
+        <div class="hamburger__container">
+          <span class="hamburger__close-button">
+            &#x2715</span>
+    
+          <ul class="hamburger__list">
+            <li class="hamburger__item">
+              <a href="#" class="hamburger__link">Travel Articles</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="#" class="hamburger__link">Reviews</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="#" class="hamburger__link">Festivals and Events</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="#" class="hamburger__link">News</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="#" class="hamburger__link">Competitions</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="#" class="hamburger__link">Food &amp; Drink</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="#" class="hamburger__link">Travel Ads</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <nav class="nav">
         <div class="nav__container">
           <div class="nav__left">
             <p class="nav__logo">Travel News</p>
           </div>
           <ul class="nav__right">
-            <a href="#" class="nav__link"> <li>Travel Articles</li></a>
-            <a href="#" class="nav__link"><li>Reviews</li></a>
-            <a href="#" class="nav__link"><li>Festivals and Events</li></a>
-            <a href="#" class="nav__link"><li>News</li></a>
-            <a href="#" class="nav__link"> <li>Competitions</li></a>
-            <a href="#" class="nav__link"> <li>Food &amp; Drink</li></a>
-            <a href="#" class="nav__link"> <li>Travel Ads</li></a>
+            <li><a href="#" class="nav__link">Travel Articles</a></li>
+            <li><a href="#" class="nav__link">Reviews</a></li>
+            <li><a href="#" class="nav__link">Festivals and Events</a></li>
+            <li><a href="#" class="nav__link">News</a></li>
+            <li><a href="#" class="nav__link">Competitions</a></li>
+            <li><a href="#" class="nav__link">Food &amp; Drink</a></li>
+            <li><a href="#" class="nav__link">Travel Ads</a></li>
           </ul>
         </div>
       </nav>
@@ -48,15 +82,15 @@
       </div>
     </div>
     <main class="page-container">
-      <h2 class="t-32 pt-9-6 section-heading"><span>Travel guides</span></h2>
+      <h2 class="section-heading"><span>Travel guides</span></h2>
       <section class="travel-guides">
         <article class="travel-guides__section-a">
           <a href="#">
             <img
               src="img/once-in-a-lifetime.jpg"
               alt="Woman in Carnaval costume dancing" />
-            <div class="travel-guides__article-a">
-              <h3 class="t-40 heading pb-1-6">
+            <div class="travel-guides__section-a__sub-1">
+              <h3 class="show-hover">
                 10 once-in-a-lifetime trips — and how to do them from a cruise
               </h3>
               <p class="link-discrete">
@@ -74,9 +108,9 @@
               <img
                 src="img/lake-filled.jpg"
                 alt="Enniskillen castle by the lake" />
-              <div class="travel-guides__article-b">
+              <div class="travel-guides__section-b__sub-1">
                 <article>
-                  <h3 class="heading t-20 pb-0-8">
+                  <h3 class="show-hover">
                     This lake-filled spot is the UK’s best-kept foodie secret
                   </h3>
                   <p>
@@ -90,9 +124,9 @@
           <a href="#">
             <div class="travel-guides__section-b__container">
               <img src="img/scandi_weekend.jpg" alt="Juvet Landscape Hotel" />
-              <div class="travel-guides__article-b">
+              <div class="travel-guides__section-b__sub-1">
                 <article>
-                  <h3 class="heading t-20 pb-0-8">
+                  <h3 class="show-hover">
                     My Scandi weekend as a Succession billionaire
                   </h3>
                   <p>
@@ -107,9 +141,9 @@
           <a href="#">
             <div class="travel-guides__section-b__container">
               <img src="img/guyana.jpg" alt="Kaieteur Falls, Guyana" />
-              <div class="travel-guides__article-b">
+              <div class="travel-guides__section-b__sub-1">
                 <article>
-                  <h3 class="heading t-20 pb-0-8">
+                  <h3 class="show-hover">
                     The captivating South American country with a new direct
                     flight
                   </h3>
@@ -128,9 +162,9 @@
                 src="img/Narilka fortress Tbilisi.jpg"
                 alt="Narilka fortress,
           Tbilisi" />
-              <div class="travel-guides__article-b">
+              <div class="travel-guides__section-b__sub-1">
                 <article>
-                  <h3 class="heading t-20 pb-0-8">
+                  <h3 class="show-hover">
                     Can a bot plan a holiday better than a human? We put it to
                     the test
                   </h3>
@@ -144,42 +178,40 @@
           </a>
         </div>
         <div class="travel-guides__section-c">
-          <a href="#">
+          <a href="#" class="travel-guides__section-c__sub-1">
             <img
               src="img/giraffes_south_africa.jpg"
               alt="a family of giraffes in South Africa" />
-            <h3 class="heading t-20 pb-0-8">
+            <h3 class="show-hover">
               The affordable way to get thrillingly close to the Big Five
             </h3>
           </a>
         </div>
         <div class="travel-guides__section-c">
-          <a href="#">
+          <a href="#" class="travel-guides__section-c__sub-1">
             <img
               src="img/six_brilliant_destinations.jpg"
               alt="a family of giraffes in South Africa" />
-            <h3 class="heading t-20 pb-0-8">
-              Six brilliant destinations that are even better in the off-season
-            </h3>
+            <h3 class="show-hover">Six brilliant</h3>
           </a>
         </div>
         <div class="travel-guides__section-c">
-          <a href="#">
+          <a href="#" class="travel-guides__section-c__sub-1">
             <img
               src="img/virgin_cruises.jpg"
               alt="a family of giraffes in South Africa" />
-            <h3 class="heading t-20 pb-0-8">
-              Virgin Voyages offers adult-only cruises
+            <h3 class="show-hover">
+              xVirgin Voyages offers adult-only cruises
             </h3>
           </a>
         </div>
 
         <div class="travel-guides__section-c">
-          <a href="#">
+          <a href="#" class="travel-guides__section-c__sub-1">
             <img
               src="img/marbella_elix_greece.jpg"
               alt="Marbella Eliz hotel, Greece" />
-            <h3 class="heading t-20 pb-0-8">
+            <h3 class="show-hover">
               Win a luxury break for two in Greece with MarBella Elix and
               Classic Collection
             </h3>
@@ -187,7 +219,7 @@
         </div>
       </section>
 
-      <h2 class="t-32 pt-9-6 section-heading">
+      <h2 class="section-heading">
         <span>Sponsored content</span>
       </h2>
       <section class="sponsored-cards">
@@ -222,7 +254,7 @@
             </div>
           </div>
         </div>
-        <div class="sponsored-cards__container pt-2-4">
+        <div class="sponsored-cards__container">
           <div class="sponsored-cards__stop-flex-wrap">
             <div class="sponsored-cards__card sponsored-cards__card--sm">
               <a href="#">
@@ -252,116 +284,154 @@
           </div>
         </div>
       </section>
-      <h2 class="t-32 pt-9-6 section-heading"><span>Travel news</span></h2>
+      <h2 class="section-heading"><span>Travel news</span></h2>
       <section class="travel-news">
         <div class="travel-news__section-a">
-          <a href="#">
-            <h4 class="t-20 heading pb-0-4">
-              11 hacks for navigating Walt Disney World this summer
-            </h4>
-            <p class="pb-2-4">
-              Every child dreams of going to Walt Disney World, and every
-              (most?) parent dreams of taking them there. For many families,
-              though, the cost of the trip can seem insurmountable.
-            </p>
-          </a>
-          <a href="#">
-            <h4 class="t-20 heading pb-0-4">
-              The risky things travelers do that compromise their cyber security
-            </h4>
-            <p>
-              More than 40 million Americans are expected to travel this
-              Memorial Day Weekend, according to AAA, and many of them are going
-              to be gold mines for cyber criminals.
-            </p>
-          </a>
-        </div>
-        <div class="travel-news__section-b">
-          <a href="#">
-            <div class="travel-news__section-b__img-container">
+          <div class="travel-news__section-a__sub-1">
+            <a href="#">
+              <h3
+                class="show-hover travel-news__section-a__title travel-news__section-a__title--main">
+                11 hacks for navigating Walt Disney World this summer
+              </h3>
+              <p>
+                Every child dreams of going to Walt Disney World, and every
+                (most?) parent dreams of taking them there. For many families,
+                though, the cost of the trip can seem insurmountable.
+              </p>
+            </a>
+
+            <!-- <a href="#">
+              <h3
+                class="show-hover travel-news__section-a__title travel-news__section-a__title--secondary">
+                The risky things travelers do that compromise their cyber
+                security
+              </h3>
+            </a> -->
+            <!-- <a href="#">
+              <h3
+                class="show-hover travel-news__section-a__title travel-news__section-a__title--secondary">
+                The risky things travelers do that compromise their cyber
+                security
+              </h3>
+            </a> -->
+          </div>
+
+          <div class="travel-news__section-a__sub-2">
+            <a href="#">
               <img src="img/disney-world.jpg" alt="Walt Disney World" />
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
 
         <div class="travel-news__section-c">
-          <a href="#">
-            <h4 class="t-16 heading pb-2-4">
+          <h3
+            class="show-hover travel-news__section-c__title travel-news__section-c__title--secondary">
+            <a href="#">
+              The risky things travelers do that compromise their cyber security
+            </a>
+          </h3>
+          <h3 class="show-hover">
+            <a href="#">
               How long will it take to renew my passport? The latest advice as
               five-week strike confirmed
-            </h4>
-          </a>
-          <a href="#">
-            <h4 class="t-16 heading pb-2-4">
+            </a>
+          </h3>
+
+          <h3 class="show-hover">
+            <a href="#">
               British Airways has lost another battle in the war with its Middle
               Eastern rivals
-            </h4>
-          </a>
-          <a href="#">
-            <h4 class="t-16 heading pb-2-4">
+            </a>
+          </h3>
+          <h3 class="show-hover">
+            <a href="#">
               How the island of La Palma bounced back after the volcanic
               eruption
-            </h4>
-          </a>
-          <a href="#">
-            <h4 class="t-16 heading">
+            </a>
+          </h3>
+          <h3 class="show-hover hide-phone">
+            <a href="#">
               The crumbling Norfolk seaside town being restored to its former
               glory
-            </h4>
-          </a>
+            </a>
+          </h3>
+          <h3 class="show-hover show-only-tab-land">
+            <a href="#"> Aito reveals 2023 Conference location </a>
+          </h3>
         </div>
       </section>
       <section class="travel-news-two">
         <div class="travel-news-two__section-a">
-          <a href="#">
-            <div class="travel-news-two__container pb-2-4">
-              <div class="travel-news-two__section-a__img-container">
-                <img src="img/Amsterdam-585x390.jpg" alt="Amsterdam at night" />
-              </div>
-              <div>
-                <h4 class="heading t-20 pb-0-4">
-                  Amsterdam: Campaign to keep out British tourists looking for a
-                  “messy” weekend
-                </h4>
-                <p>
-                  Amsterdam has long been the go-to party place for tourists and
-                  too often drug and drink-fuelled evenings end up becoming
-                  rowdy thanks to ...
-                </p>
-              </div>
+          <a class="travel-news-two__section-a__container" href="#">
+            <img src="img/Amsterdam-585x390.jpg" alt="Amsterdam at night" />
+            <div>
+              <h3 class="show-hover">
+                Amsterdam: Campaign to keep out rowdy tourists
+                <span class="travel-news-two__section-a__title-long"
+                  >looking for a “messy” weekend</span
+                >
+              </h3>
+              <p>
+                Noisy stag parties, pub crawls and visits to the red light
+                district in Amsterdam are a concern.
+              </p>
             </div>
           </a>
-          <a href="#">
-            <div class="travel-news-two__container pb-2-4">
-              <div class="travel-news-two__section-a__img-container">
-                <img
-                  src="img/pantheon-3398466_1920-1170x781.jpg"
-                  alt="Pantheon, Rome" />
-              </div>
-              <div>
-                <h4 class="heading t-20 pb-0-4">
-                  The Pantheon to impose an entry fee
-                </h4>
-                <p>
-                  The Pantheon - the work of angels, not men” is Rome's most
-                  popular cultural site and soon will no longer be free to
-                  visit.
-                </p>
-              </div>
+
+          <a class="travel-news-two__section-a__container" href="#">
+            <img
+              src="img/pantheon-3398466_1920-1170x781.jpg"
+              alt="Pantheon, Rome" />
+
+            <div>
+              <h3 class="show-hover">The Pantheon to impose an entry fee</h3>
+              <p>
+                The Pantheon - the work of angels, not men” is Rome's most
+                popular cultural site and soon will no longer be free to visit.
+              </p>
+            </div>
+          </a>
+          <a
+            class="travel-news-two__section-a__container show-tab-land-flex"
+            href="#">
+            <img src="img/Brittany-Ferries-1170x814.jpg" alt="Brittany ferry" />
+
+            <div>
+              <h3 class="show-hover">
+                Brittany Ferries ditches dual pricing on board
+              </h3>
+              <p>
+                Brittany Ferries a leading French shipping company, is changing
+                the way it displays the pricing on all its vessels.
+              </p>
+            </div>
+          </a>
+          <a
+            class="travel-news-two__section-a__container show-tab-land-flex"
+            href="#">
+            <img src="img/mountain-lion.jpg" alt="Mountain lion" />
+
+            <div>
+              <h3 class="show-hover">
+                Mountain lion attacks tourist in a pool in Colorado
+              </h3>
+              <p>
+                The visitor suffered scratches on his head before the predator
+                fled to higher ground.
+              </p>
             </div>
           </a>
         </div>
         <div class="travel-news-two__section-b">
-          <article class="travel-news-two__section-b__sub-1">
+          <article class="travel-news-two__section-b__sub-1 hide-tab-land">
             <a href="#">
-              <div class="travel-news-two__section-b__img-container">
-                <img
-                  src="img/Brittany-Ferries-1170x814.jpg"
-                  alt="Brittany ferry" />
-              </div>
-              <h4 class="heading t-20 pb-0-4 pt-0-4">
+              <img
+                src="img/Brittany-Ferries-1170x814.jpg"
+                alt="Brittany ferry" />
+
+              <h3 class="show-hover">
                 Brittany Ferries ditches dual pricing on board
-              </h4>
+              </h3>
               <p>
                 Brittany Ferries a leading French shipping company, is changing
                 the way it displays the pricing on all its vessels.
@@ -369,14 +439,13 @@
             </a>
           </article>
 
-          <article class="travel-news-two__section-b__sub-2">
+          <article class="travel-news-two__section-b__sub-1 hide-tab-land">
             <a href="#">
-              <div class="travel-news-two__section-b__img-container">
-                <img src="img/mountain-lion.jpg" alt="mountain lion" />
-              </div>
-              <h4 class="heading t-20 pb-0-4 pt-0-4">
+              <img src="img/mountain-lion.jpg" alt="mountain lion" />
+
+              <h3 class="show-hover">
                 Mountain lion attacks tourist in a pool in Colorado
-              </h4>
+              </h3>
               <p>
                 The visitor suffered scratches on his head before the predator
                 fled to higher ground.
@@ -384,14 +453,11 @@
             </a>
           </article>
 
-          <article class="travel-news-two__section-b__sub-3">
+          <article class="travel-news-two__section-b__sub-1 hide-tab-land">
             <a href="#">
-              <div class="travel-news-two__section-b__img-container">
-                <img src="img/aito-conference.jpg" alt="Thessaloniki, Greece" />
-              </div>
-              <h4 class="heading t-20 pb-0-4 pt-0-4">
-                Aito reveals 2023 conference location
-              </h4>
+              <img src="img/aito-conference.jpg" alt="Thessaloniki, Greece" />
+
+              <h3 class="show-hover">Aito reveals 2023 conference location</h3>
               <p>
                 Aito revealed Thessaloniki in Greece as the location for its
                 2023 overseas conference ...
