@@ -50,6 +50,19 @@
     color: white;
   }
 
+  &__close-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    @include t-4-0;
+    font-weight: 700;
+    padding: var(--spacing-1-6) var(--spacing-2-4);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &__list {
     margin-top: var(--spacing-9-6);
     margin-left: var(--spacing-1-6);

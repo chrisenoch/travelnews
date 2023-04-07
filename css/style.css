@@ -599,6 +599,18 @@ body {
   background-color: var(--color-primary);
   color: white; }
 
+.hamburger__close-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 4rem;
+  font-size: clamp(32px, 4rem, 4rem);
+  line-height: 1.2;
+  font-weight: 700;
+  padding: var(--spacing-1-6) var(--spacing-2-4); }
+  .hamburger__close-button:hover {
+    cursor: pointer; }
+
 .hamburger__list {
   margin-top: var(--spacing-9-6);
   margin-left: var(--spacing-1-6); }
