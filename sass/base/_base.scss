@@ -11,6 +11,8 @@
   // --color-tertiary: hsl(37, 60%, 53%);
   --color-primary: #008080;
   --color-secondary: rgb(14, 83, 139);
+  --color-secondary-light: rgb(180, 206, 227);
+  --color-secondary-extra-light: rgb(226, 231, 243);
   --color-tertiary: #bf5500;
   --color-tertiary: rgb(214, 140, 3);
 
@@ -95,6 +97,7 @@ a:hover,
 a:active {
   color: currentColor;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .show-hover:hover,

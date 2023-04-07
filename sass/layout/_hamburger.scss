@@ -1,5 +1,6 @@
 .hamburger {
-  //   position: relative;
+  position: fixed;
+  z-index: 20;
 
   &__icon {
     position: relative;
@@ -39,13 +40,13 @@
     left: 0px;
     height: 100vh;
     width: 32.5rem;
-    // padding: var(--spacing-3-2);
     list-style: none;
     z-index: 1000;
     background-color: rgba(83, 100, 113, 0.9);
     background-color: rgba(var(--color-headline), 0.9);
     background-color: rgba(33, 33, 33, 0.9);
     background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     // background-color: rgb(4, 16, 56);
     color: white;
   }
@@ -54,7 +55,7 @@
     position: absolute;
     top: 0px;
     right: 0px;
-    @include t-4-0;
+    font-size: 3rem;
     font-weight: 700;
     padding: var(--spacing-1-6) var(--spacing-2-4);
 
@@ -65,18 +66,52 @@
 
   &__list {
     margin-top: var(--spacing-9-6);
-    margin-left: var(--spacing-1-6);
+    margin-top: 5.8rem;
+  }
+
+  &__list-container {
+    margin-top: var(--spacing-9-6);
+    margin-top: 5.8rem;
+    margin-top: 7rem;
   }
 
   &__item {
-    padding: var(--spacing-1-6) 0;
+    &::after {
+      display: block;
+      height: 2px;
+      background-color: rgb(12, 73, 122);
+      content: " ";
+      width: 100%;
+      // margin-top: 30px;
+    }
+
+    &:first-child::before {
+      display: block;
+      height: 2px;
+      background-color: rgb(12, 73, 122);
+      content: " ";
+      width: 100%;
+      // margin-bottom: 30px;
+    }
   }
 
   &__link {
-    padding: var(--spacing-0-8) var(--spacing-1-6);
-    border-radius: var(--border-radius-md);
-    &:hover {
-      background-color: gray;
+    padding: var(--spacing-2-4) var(--spacing-2-4);
+    display: block;
+    width: 100%;
+    height: 100%;
+    // border-radius: var(--border-radius-md);
+
+    &:link,
+    &:visited {
+      color: var(--color-secondary-extra-light);
+    }
+
+    &:hover,
+    &:active {
+      color: currentColor;
+      background-color: rgb(12, 73, 122);
+      cursor: pointer;
     }
   }
 
