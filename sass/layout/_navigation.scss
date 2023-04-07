@@ -22,19 +22,20 @@
     align-items: center;
   }
 
+  // &__logo {
+  //   @include t-2-0;
+  //   font-weight: 500;
+  //   color: var(--color-primary);
+  //   background-color: white;
+  //   padding: var(--spacing-0-8) var(--spacing-1-6);
+  //   border-radius: var(--border-radius-md);
+  // }
+
   &__logo {
-    @include t-2-0;
-    font-weight: 500;
-    color: var(--color-primary);
-    background-color: white;
-    padding: var(--spacing-0-8) var(--spacing-1-6);
-    border-radius: var(--border-radius-md);
+    height: 35px;
   }
 
   &__left {
-    img {
-      height: 40px;
-    }
   }
 
   &__right {
