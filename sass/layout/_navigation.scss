@@ -5,8 +5,9 @@
   background-color: var(--color-headline);
   background-color: rgba(0, 0, 0, 0.8);
   background-color: black;
+
   width: 100%;
-  border-bottom: 1px solid var(--color-navbar-border);
+  // border-bottom: 1px solid var(--color-navbar-border);
   position: fixed;
   top: 0px;
   left: 0px;
@@ -31,6 +32,9 @@
   }
 
   &__left {
+    img {
+      height: 40px;
+    }
   }
 
   &__right {
