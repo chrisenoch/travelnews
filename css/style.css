@@ -562,6 +562,84 @@ body {
   display: block;
   background-color: var(--color-primary); }
 
+.hamburger__icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .hamburger__icon, .hamburger__icon::before, .hamburger__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: var(--color-text);
+    display: inline-block; }
+  .hamburger__icon::before, .hamburger__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s; }
+  .hamburger__icon::before {
+    top: -0.8rem; }
+  .hamburger__icon::after {
+    top: 0.8rem; }
+
+.hamburger__container {
+  font-size: 2rem;
+  font-size: clamp(20px, 2rem, 2rem);
+  line-height: 1.4;
+  display: inline-block;
+  position: absolute;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 32.5rem;
+  list-style: none;
+  z-index: 1000;
+  background-color: rgba(83, 100, 113, 0.9);
+  background-color: rgba(var(--color-headline), 0.9);
+  background-color: rgba(33, 33, 33, 0.9);
+  background-color: var(--color-primary);
+  color: white; }
+
+.hamburger__list {
+  margin-top: var(--spacing-9-6);
+  margin-left: var(--spacing-1-6); }
+
+.hamburger__item {
+  padding: var(--spacing-1-6) 0; }
+
+.hamburger__link {
+  padding: var(--spacing-0-8) var(--spacing-1-6);
+  border-radius: var(--border-radius-md); }
+  .hamburger__link:hover {
+    background-color: gray; }
+
+.hamburger__button {
+  display: inline-block;
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  border-radius: 50%;
+  box-shadow: 0 1rem 3rem rgba(var(--color-text), 0.1);
+  text-align: center;
+  cursor: pointer; }
+
+.hamburger__button:hover .hamburger__icon::before {
+  top: -1rem; }
+
+.hamburger__button:hover .hamburger__icon::after {
+  top: 1rem; }
+
+.hamburger__checkbox:checked + .hamburger__button .hamburger__icon {
+  background-color: transparent; }
+
+.hamburger__checkbox:checked + .hamburger__button .hamburger__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.hamburger__checkbox:checked + .hamburger__button .hamburger__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
 .hero__image {
   width: 1500px;
   display: block;

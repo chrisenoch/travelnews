@@ -1,0 +1,104 @@
+.hamburger {
+  //   position: relative;
+
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: var(--color-text);
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__container {
+    @include t-2-0;
+    display: inline-block;
+    position: absolute;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 32.5rem;
+    // padding: var(--spacing-3-2);
+    list-style: none;
+    z-index: 1000;
+    background-color: rgba(83, 100, 113, 0.9);
+    background-color: rgba(var(--color-headline), 0.9);
+    background-color: rgba(33, 33, 33, 0.9);
+    background-color: var(--color-primary);
+    // background-color: rgb(4, 16, 56);
+    color: white;
+  }
+
+  &__list {
+    margin-top: var(--spacing-9-6);
+    margin-left: var(--spacing-1-6);
+  }
+
+  &__item {
+    padding: var(--spacing-1-6) 0;
+  }
+
+  &__link {
+    padding: var(--spacing-0-8) var(--spacing-1-6);
+    border-radius: var(--border-radius-md);
+    &:hover {
+      background-color: gray;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    background-color: white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    border-radius: 50%;
+    // z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(var(--color-text), 0.1);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
