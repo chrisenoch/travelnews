@@ -79,10 +79,16 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @mixin respond($breakpoint) {
-  @if $breakpoint == phone-sm {
-    @media only screen and (max-width: 25em) {
+  @if $breakpoint == phone-x-sm {
+    @media only screen and (max-width: 22.8em) {
       @content;
-    } //600px
+    } //365px
+  }
+
+  @if $breakpoint == phone-sm {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    } //500px (500/16 = 31.25)
   }
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
@@ -92,7 +98,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   @if $breakpoint == tab-port-sm {
     @media only screen and (max-width: 47.5em) {
       @content;
-    } //900px
+    }
   }
   @if $breakpoint == tab-port {
     @media only screen and (max-width: 56.25em) {

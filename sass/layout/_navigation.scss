@@ -22,6 +22,7 @@
 
   &__logo {
     height: 35px;
+    vertical-align: middle;
     @include respond(tab-land) {
       margin-left: 65px;
     }
@@ -37,14 +38,19 @@
   }
 
   &__item {
+    &--7 {
+      @include respond(phone-x-sm) {
+        display: none;
+      }
+    }
     &--6 {
-      @include respond(tab-land-sm) {
+      @include respond(tab-land) {
         display: none;
       }
     }
 
     &--5 {
-      @include respond(tab-land) {
+      @include respond(tab-land-sm) {
         display: none;
       }
     }
@@ -88,6 +94,10 @@
   }
 
   &__cta {
+    @include respond(tab-port) {
+      padding: 0.6rem 1rem;
+    }
+
     background-color: white;
     padding: var(--spacing-0-8) var(--spacing-1-6);
     border-radius: var(--border-radius-md);
