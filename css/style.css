@@ -613,8 +613,12 @@ body {
       background-color: #0c497a; }
 
 .hamburger {
+  display: none;
   position: fixed;
   z-index: 20; }
+  @media only screen and (max-width: 75em) {
+    .hamburger {
+      display: block; } }
   .hamburger__icon {
     position: relative;
     margin-top: 3.5rem; }
@@ -672,7 +676,7 @@ body {
   .hamburger__item:first-child::before {
     display: block;
     height: 2px;
-    background-color: #0c497a;
+    background-color: #0c4879;
     content: " ";
     width: 100%; }
   .hamburger__link {
@@ -692,7 +696,7 @@ body {
     width: 7rem;
     position: fixed;
     border-radius: 50%;
-    box-shadow: 0 1rem 3rem rgba(var(--color-text), 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     text-align: center;
     cursor: pointer; }
   .hamburger__button:hover .hamburger__icon::before {
@@ -1139,18 +1143,15 @@ body {
 
 .nav {
   height: 6rem;
-  font-size: 1.4rem;
-  font-size: clamp(14px, 1.4rem, 1.4rem);
   font-size: 1.6rem;
   font-size: clamp(16px, 1.6rem, 1.6rem);
-  background-color: var(--color-headline);
-  background-color: rgba(0, 0, 0, 0.8);
   background-color: black;
   width: 100%;
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 10; }
+  z-index: 10;
+  white-space: nowrap; }
   .nav__container {
     height: 100%;
     max-width: 1220px;
@@ -1161,10 +1162,31 @@ body {
     align-items: center; }
   .nav__logo {
     height: 35px; }
+    @media only screen and (max-width: 75em) {
+      .nav__logo {
+        margin-left: 65px; } }
   .nav__right {
     display: flex;
     justify-content: flex-end;
     gap: var(--spacing-3-2); }
+  @media only screen and (max-width: 62.5em) {
+    .nav__item--6 {
+      display: none; } }
+  @media only screen and (max-width: 75em) {
+    .nav__item--5 {
+      display: none; } }
+  @media only screen and (max-width: 56.25em) {
+    .nav__item--4 {
+      display: none; } }
+  @media only screen and (max-width: 47.5em) {
+    .nav__item--3 {
+      display: none; } }
+  @media only screen and (max-width: 37.5em) {
+    .nav__item--2 {
+      display: none; } }
+  @media only screen and (max-width: 25em) {
+    .nav__item--1 {
+      display: none; } }
   .nav__link {
     text-decoration: none; }
     .nav__link:link, .nav__link:visited {

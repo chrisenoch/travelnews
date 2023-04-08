@@ -1,4 +1,8 @@
 .hamburger {
+  @include respond(tab-land) {
+    display: block;
+  }
+  display: none;
   position: fixed;
   z-index: 20;
 
@@ -46,11 +50,7 @@
     // background: linear-gradient(to bottom, rgb(8, 47, 78), rgb(3, 18, 31));
     // background: linear-gradient(to bottom, rgb(3, 18, 31), rgb(14, 83, 139));
     // background: linear-gradient(to bottom, rgb(6, 34, 59), rgb(14, 83, 139));
-    // background: linear-gradient(
-    //   to bottom,
-    //   rgb(9, 55, 93),
-    //   rgb(14, 83, 139)
-    // );
+    // rrrr rrrrrrrrrrrrrr
     color: white;
   }
 
@@ -91,7 +91,7 @@
     &:first-child::before {
       display: block;
       height: 2px;
-      background-color: rgb(12, 73, 122);
+      background-color: hsl(207, 82%, 26%);
       content: " ";
       width: 100%;
       // margin-bottom: 30px;
@@ -125,7 +125,7 @@
     position: fixed;
     border-radius: 50%;
     // z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba(var(--color-text), 0.1);
+    box-shadow: 0 1px 1px rgba(black, 0.5);
     text-align: center;
     cursor: pointer;
   }
