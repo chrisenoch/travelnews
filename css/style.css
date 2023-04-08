@@ -27,7 +27,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   --color-border: hsl(0, 0%, 80%);
   --color-navbar-border: hsl(0, 0%, 95%);
   --color-primary: #008080;
-  --color-secondary: rgb(14, 83, 139);
+  --color-secondary: hsl(207, 83%, 30%);
   --color-secondary-light: rgb(180, 206, 227);
   --color-secondary-extra-light: rgb(226, 231, 243);
   --color-secondary-dark: hsl(207, 81%, 17%);
@@ -724,9 +724,7 @@ body {
     object-fit: cover;
     display: block;
     height: 100%;
-    width: 100%;
-    border-bottom-right-radius: var(--border-radius-md);
-    border-bottom-left-radius: var(--border-radius-md); }
+    width: 100%; }
   .hero__text-container {
     background-color: var(--color-secondary);
     background-color: rgba(0, 0, 0, 0.7);
@@ -1155,7 +1153,8 @@ body {
   z-index: 10; }
   .nav__container {
     height: 100%;
-    width: 120rem;
+    max-width: 1220px;
+    padding: 0 10px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: minmax(min-content, max-content) 1fr;
