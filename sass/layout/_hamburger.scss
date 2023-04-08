@@ -42,12 +42,15 @@
     width: 32.5rem;
     list-style: none;
     z-index: 1000;
-    background-color: rgba(83, 100, 113, 0.9);
-    background-color: rgba(var(--color-headline), 0.9);
-    background-color: rgba(33, 33, 33, 0.9);
-    background-color: var(--color-primary);
     background-color: var(--color-secondary);
-    // background-color: rgb(4, 16, 56);
+    // background: linear-gradient(to bottom, rgb(8, 47, 78), rgb(3, 18, 31));
+    // background: linear-gradient(to bottom, rgb(3, 18, 31), rgb(14, 83, 139));
+    // background: linear-gradient(to bottom, rgb(6, 34, 59), rgb(14, 83, 139));
+    // background: linear-gradient(
+    //   to bottom,
+    //   rgb(9, 55, 93),
+    //   rgb(14, 83, 139)
+    // );
     color: white;
   }
 
@@ -109,9 +112,8 @@
 
     &:hover,
     &:active {
-      color: currentColor;
+      color: white;
       background-color: rgb(12, 73, 122);
-      cursor: pointer;
     }
   }
 
