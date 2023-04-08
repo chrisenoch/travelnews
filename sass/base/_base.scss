@@ -13,8 +13,10 @@
   --color-secondary: rgb(14, 83, 139);
   --color-secondary-light: rgb(180, 206, 227);
   --color-secondary-extra-light: rgb(226, 231, 243);
-  --color-tertiary: #bf5500;
+  --color-secondary-dark: hsl(207, 81%, 17%);
+  // --color-tertiary: #bf5500;
   --color-tertiary: rgb(214, 140, 3);
+  --color-tertiary-light: rgb(214, 198, 119);
 
   /* Spoacing to be used with padding and borders. The idea is to use these as enums in order to avoid errors. */
   --spacing-0-2: 0.2rem;
