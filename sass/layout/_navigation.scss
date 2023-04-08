@@ -39,7 +39,7 @@
 
   &__item {
     &--7 {
-      @include respond(phone-x-sm) {
+      @include respond(phone-xs) {
         display: none;
       }
     }
@@ -50,7 +50,7 @@
     }
 
     &--5 {
-      @include respond(tab-land-sm) {
+      @include respond(tab-land-s) {
         display: none;
       }
     }
@@ -61,7 +61,7 @@
       }
     }
     &--3 {
-      @include respond(tab-port-sm) {
+      @include respond(tab-port-s) {
         display: none;
       }
     }
@@ -72,7 +72,7 @@
       }
     }
     &--1 {
-      @include respond(phone-sm) {
+      @include respond(phone-s) {
         display: none;
       }
     }

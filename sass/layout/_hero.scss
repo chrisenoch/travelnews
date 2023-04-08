@@ -8,11 +8,11 @@
     height: 50rem;
   }
 
-  @include respond(phone-sm) {
+  @include respond(phone-s) {
     height: 45rem;
   }
 
-  @include respond(phone-x-sm) {
+  @include respond(phone-xs) {
     height: 40rem;
   }
 
