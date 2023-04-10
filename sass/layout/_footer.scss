@@ -1,16 +1,14 @@
 .footer {
+  color: white;
+  @include t-1-6;
+  line-height: 2.5;
+  white-space: nowrap;
   margin-top: var(--spacing-9-6);
-  background-color: hsl(207, 81%, 17%);
-  //   background-color: var(--color-primary);
-  //   background: linear-gradient(to bottom, rgb(8, 47, 78), rgb(3, 18, 31));
   background: linear-gradient(
     to bottom,
     hsl(207, 81%, 17%),
     hsl(207, 81%, 27%)
   );
-  color: white;
-  @include t-1-6;
-  line-height: 2.5;
 
   &__header {
     padding-bottom: var(--spacing-0-8);
@@ -39,8 +37,9 @@
     padding: var(--spacing-3-2) 10px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: var(--spacing-2-4);
+    grid-gap: var(--spacing-3-2);
   }
 
   &__list {

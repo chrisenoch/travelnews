@@ -571,13 +571,13 @@ body {
   background-color: var(--color-primary); }
 
 .footer {
-  margin-top: var(--spacing-9-6);
-  background-color: #082f4e;
-  background: linear-gradient(to bottom, #082f4e, #0d4a7d);
   color: white;
   font-size: 1.6rem;
   font-size: clamp(16px, 1.6rem, 1.6rem);
-  line-height: 2.5; }
+  line-height: 2.5;
+  white-space: nowrap;
+  margin-top: var(--spacing-9-6);
+  background: linear-gradient(to bottom, #082f4e, #0d4a7d); }
   .footer__header {
     padding-bottom: var(--spacing-0-8);
     padding: var(--spacing-0-8);
@@ -602,8 +602,9 @@ body {
     padding: var(--spacing-3-2) 10px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    grid-gap: var(--spacing-2-4); }
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: var(--spacing-2-4);
+    grid-gap: var(--spacing-3-2); }
   .footer__list {
     padding-top: var(--spacing-0-8); }
   .footer__link {
