@@ -1,4 +1,8 @@
 .footer {
+  @include respond(phone-s) {
+    @include t-1-4;
+  }
+
   color: white;
   @include t-1-6;
   line-height: 2.5;
@@ -31,14 +35,15 @@
   }
 
   &__container {
-    padding: var(--spacing-3-2);
+    @include respond(phone-s) {
+      padding: var(--spacing-3-2) 10px;
+      grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+    }
     max-width: 1220px;
-    padding: 0 10px;
-    padding: var(--spacing-3-2) 10px;
+    padding: var(--spacing-3-2) 20px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: var(--spacing-2-4);
     grid-gap: var(--spacing-3-2);
   }
 
