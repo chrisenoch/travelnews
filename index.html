@@ -89,9 +89,18 @@
     </header>
     <div class="hero">
       <img
-        class="hero__image"
-        src="img/taj-mahal-1024327.jpg"
-        alt="Taj Mihal" />
+        srcset="
+          img/pixabay/taj-mahal-420.jpg          420w,
+          img/pixabay/taj-mahal-500.jpg          500w,
+          img/pixabay/taj-mahal-640-426.jpg      640w,
+          img/pixabay/taj-mahal-1280-853.jpg    1280w,
+          img/pixabay/taj-mahal-1920-1280.jpg   1920w,
+          img/pixabay/taj-mahal-54327-3648.jpg 54327w
+        "
+        sizes="100vw"
+        alt="Taj Mihal"
+        class="hero__image" />
+
       <a href="#" class="hero__link">
         <div class="hero__text-container">
           <div class="hero__text">
