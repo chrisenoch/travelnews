@@ -560,6 +560,9 @@ body {
     background-color: var(--color-primary);
     padding: var(--spacing-0-8);
     border-radius: var(--border-radius-md); }
+  @media only screen and (max-width: 75em) {
+    .section-heading--first {
+      padding-top: var(--spacing-4-8); } }
 
 .section-heading:after {
   content: "";
@@ -613,8 +616,13 @@ body {
       background-color: #0c497a; }
 
 .hamburger {
+  display: none;
   position: fixed;
-  z-index: 20; }
+  z-index: 20;
+  white-space: nowrap; }
+  @media only screen and (max-width: 75em) {
+    .hamburger {
+      display: block; } }
   .hamburger__icon {
     position: relative;
     margin-top: 3.5rem; }
@@ -647,6 +655,12 @@ body {
     z-index: 1000;
     background-color: var(--color-secondary);
     color: white; }
+    @media only screen and (max-width: 31.25em) {
+      .hamburger__container {
+        font-size: 1.6rem;
+        font-size: clamp(16px, 1.6rem, 1.6rem);
+        width: 100%;
+        height: auto; } }
   .hamburger__close-button {
     position: absolute;
     top: 0px;
@@ -659,27 +673,37 @@ body {
   .hamburger__list {
     margin-top: var(--spacing-9-6);
     margin-top: 5.8rem; }
+    @media only screen and (max-width: 31.25em) {
+      .hamburger__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        padding: 0 var(--spacing-2-4);
+        border-top: 2px solid #0c4879; } }
   .hamburger__list-container {
     margin-top: var(--spacing-9-6);
     margin-top: 5.8rem;
     margin-top: 7rem; }
-  .hamburger__item::after {
-    display: block;
-    height: 2px;
-    background-color: #0c497a;
-    content: " ";
-    width: 100%; }
   .hamburger__item:first-child::before {
     display: block;
     height: 2px;
-    background-color: #0c497a;
+    background-color: #0c4879;
     content: " ";
     width: 100%; }
+    @media only screen and (max-width: 31.25em) {
+      .hamburger__item:first-child::before {
+        display: none;
+        height: 0px;
+        background-color: inherit;
+        width: auto; } }
   .hamburger__link {
     padding: var(--spacing-2-4) var(--spacing-2-4);
     display: block;
     width: 100%;
     height: 100%; }
+    @media only screen and (max-width: 31.25em) {
+      .hamburger__link {
+        text-align: center;
+        padding: var(--spacing-2-4) var(--spacing-2-4) var(--spacing-2-4) 0; } }
     .hamburger__link:link, .hamburger__link:visited {
       color: var(--color-secondary-extra-light); }
     .hamburger__link:hover, .hamburger__link:active {
@@ -692,27 +716,28 @@ body {
     width: 7rem;
     position: fixed;
     border-radius: 50%;
-    box-shadow: 0 1rem 3rem rgba(var(--color-text), 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     text-align: center;
     cursor: pointer; }
   .hamburger__button:hover .hamburger__icon::before {
     top: -1rem; }
   .hamburger__button:hover .hamburger__icon::after {
     top: 1rem; }
-  .hamburger__checkbox:checked + .hamburger__button .hamburger__icon {
-    background-color: transparent; }
-  .hamburger__checkbox:checked + .hamburger__button .hamburger__icon::before {
-    top: 0;
-    transform: rotate(135deg); }
-  .hamburger__checkbox:checked + .hamburger__button .hamburger__icon::after {
-    top: 0;
-    transform: rotate(-135deg); }
 
 .hero {
-  height: 615px;
+  height: 61.5rem;
   width: 100%;
   margin: 0 auto;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .hero {
+      height: 50rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .hero {
+      height: 45rem; } }
+  @media only screen and (max-width: 22.8em) {
+    .hero {
+      height: 40rem; } }
   .hero__link {
     text-decoration: none; }
     .hero__link:link, .hero__link:visited {
@@ -726,7 +751,6 @@ body {
     height: 100%;
     width: 100%; }
   .hero__text-container {
-    background-color: var(--color-secondary);
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     bottom: 0px;
@@ -734,12 +758,19 @@ body {
     padding: var(--spacing-0-8);
     transform: translateX(-50%);
     border-radius: var(--border-radius-md); }
+    @media only screen and (max-width: 56.25em) {
+      .hero__text-container {
+        width: 100%;
+        border-radius: 0px; } }
   .hero__text {
     font-weight: 500;
     font-size: 2.4rem;
-    width: 600px;
+    width: 60rem;
     margin: 0 auto;
     text-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .hero__text {
+        width: 100%; } }
 
 .page-container {
   max-width: 1220px;
@@ -1139,18 +1170,15 @@ body {
 
 .nav {
   height: 6rem;
-  font-size: 1.4rem;
-  font-size: clamp(14px, 1.4rem, 1.4rem);
   font-size: 1.6rem;
   font-size: clamp(16px, 1.6rem, 1.6rem);
-  background-color: var(--color-headline);
-  background-color: rgba(0, 0, 0, 0.8);
   background-color: black;
   width: 100%;
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 10; }
+  z-index: 10;
+  white-space: nowrap; }
   .nav__container {
     height: 100%;
     max-width: 1220px;
@@ -1160,11 +1188,36 @@ body {
     grid-template-columns: minmax(min-content, max-content) 1fr;
     align-items: center; }
   .nav__logo {
-    height: 35px; }
+    height: 35px;
+    vertical-align: middle; }
+    @media only screen and (max-width: 75em) {
+      .nav__logo {
+        margin-left: 65px; } }
   .nav__right {
     display: flex;
     justify-content: flex-end;
     gap: var(--spacing-3-2); }
+  @media only screen and (max-width: 22.8em) {
+    .nav__item--7 {
+      display: none; } }
+  @media only screen and (max-width: 75em) {
+    .nav__item--6 {
+      display: none; } }
+  @media only screen and (max-width: 62.5em) {
+    .nav__item--5 {
+      display: none; } }
+  @media only screen and (max-width: 56.25em) {
+    .nav__item--4 {
+      display: none; } }
+  @media only screen and (max-width: 47.5em) {
+    .nav__item--3 {
+      display: none; } }
+  @media only screen and (max-width: 37.5em) {
+    .nav__item--2 {
+      display: none; } }
+  @media only screen and (max-width: 31.25em) {
+    .nav__item--1 {
+      display: none; } }
   .nav__link {
     text-decoration: none; }
     .nav__link:link, .nav__link:visited {
@@ -1177,6 +1230,9 @@ body {
     padding: var(--spacing-0-8) var(--spacing-1-6);
     border-radius: var(--border-radius-md);
     font-weight: 500; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__cta {
+        padding: 0.6rem 1rem; } }
     .nav__cta:link, .nav__cta:visited {
       color: var(--color-text); }
     .nav__cta:hover, .nav__cta:active {

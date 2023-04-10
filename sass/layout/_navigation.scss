@@ -1,17 +1,13 @@
 .nav {
   height: 6rem;
-  @include t-1-4;
   @include t-1-6;
-  background-color: var(--color-headline);
-  background-color: rgba(0, 0, 0, 0.8);
   background-color: black;
-
   width: 100%;
-  // border-bottom: 1px solid var(--color-navbar-border);
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 10;
+  white-space: nowrap;
 
   &__container {
     height: 100%;
@@ -26,6 +22,10 @@
 
   &__logo {
     height: 35px;
+    vertical-align: middle;
+    @include respond(tab-land) {
+      margin-left: 65px;
+    }
   }
 
   &__left {
@@ -35,6 +35,47 @@
     display: flex;
     justify-content: flex-end;
     gap: var(--spacing-3-2);
+  }
+
+  &__item {
+    &--7 {
+      @include respond(phone-xs) {
+        display: none;
+      }
+    }
+    &--6 {
+      @include respond(tab-land) {
+        display: none;
+      }
+    }
+
+    &--5 {
+      @include respond(tab-land-s) {
+        display: none;
+      }
+    }
+
+    &--4 {
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+    &--3 {
+      @include respond(tab-port-s) {
+        display: none;
+      }
+    }
+
+    &--2 {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+    &--1 {
+      @include respond(phone-s) {
+        display: none;
+      }
+    }
   }
 
   &__link {
@@ -53,6 +94,10 @@
   }
 
   &__cta {
+    @include respond(tab-port) {
+      padding: 0.6rem 1rem;
+    }
+
     background-color: white;
     padding: var(--spacing-0-8) var(--spacing-1-6);
     border-radius: var(--border-radius-md);

@@ -1,6 +1,11 @@
 .hamburger {
+  @include respond(tab-land) {
+    display: block;
+  }
+  display: none;
   position: fixed;
   z-index: 20;
+  white-space: nowrap;
 
   &__icon {
     position: relative;
@@ -32,6 +37,11 @@
   }
 
   &__container {
+    @include respond(phone-s) {
+      @include t-1-6;
+      width: 100%;
+      height: auto;
+    }
     @include t-2-0;
     display: inline-block;
     position: absolute;
@@ -43,14 +53,6 @@
     list-style: none;
     z-index: 1000;
     background-color: var(--color-secondary);
-    // background: linear-gradient(to bottom, rgb(8, 47, 78), rgb(3, 18, 31));
-    // background: linear-gradient(to bottom, rgb(3, 18, 31), rgb(14, 83, 139));
-    // background: linear-gradient(to bottom, rgb(6, 34, 59), rgb(14, 83, 139));
-    // background: linear-gradient(
-    //   to bottom,
-    //   rgb(9, 55, 93),
-    //   rgb(14, 83, 139)
-    // );
     color: white;
   }
 
@@ -68,6 +70,12 @@
   }
 
   &__list {
+    @include respond(phone-s) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      padding: 0 var(--spacing-2-4);
+      border-top: 2px solid hsl(207, 82%, 26%);
+    }
     margin-top: var(--spacing-9-6);
     margin-top: 5.8rem;
   }
@@ -79,19 +87,25 @@
   }
 
   &__item {
-    &::after {
-      display: block;
-      height: 2px;
-      background-color: rgb(12, 73, 122);
-      content: " ";
-      width: 100%;
-      // margin-top: 30px;
-    }
+    // &::after {
+    //   display: block;
+    //   height: 2px;
+    //   background-color: rgb(12, 73, 122);
+    //   content: " ";
+    //   width: 100%;
+    //   // margin-top: 30px;
+    // }
 
     &:first-child::before {
+      @include respond(phone-s) {
+        display: none;
+        height: 0px;
+        background-color: inherit;
+        width: auto;
+      }
       display: block;
       height: 2px;
-      background-color: rgb(12, 73, 122);
+      background-color: hsl(207, 82%, 26%);
       content: " ";
       width: 100%;
       // margin-bottom: 30px;
@@ -99,6 +113,10 @@
   }
 
   &__link {
+    @include respond(phone-s) {
+      text-align: center;
+      padding: var(--spacing-2-4) var(--spacing-2-4) var(--spacing-2-4) 0;
+    }
     padding: var(--spacing-2-4) var(--spacing-2-4);
     display: block;
     width: 100%;
@@ -125,7 +143,7 @@
     position: fixed;
     border-radius: 50%;
     // z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba(var(--color-text), 0.1);
+    box-shadow: 0 1px 1px rgba(black, 0.5);
     text-align: center;
     cursor: pointer;
   }
@@ -136,19 +154,5 @@
 
   &__button:hover &__icon::after {
     top: 1rem;
-  }
-
-  &__checkbox:checked + &__button &__icon {
-    background-color: transparent;
-  }
-
-  &__checkbox:checked + &__button &__icon::before {
-    top: 0;
-    transform: rotate(135deg);
-  }
-
-  &__checkbox:checked + &__button &__icon::after {
-    top: 0;
-    transform: rotate(-135deg);
   }
 }
