@@ -118,9 +118,22 @@
       <section class="travel-guides">
         <article class="travel-guides__section-a">
           <a href="#">
-            <img
+            <!-- <img
               src="img/once-in-a-lifetime.jpg"
-              alt="Woman in Carnaval costume dancing" />
+              alt="Woman in Carnaval costume dancing" /> -->
+            <img
+              srcset="
+                img/once-in-a-lifetime-400.jpg   400w,
+                img/once-in-a-lifetime-500.jpg   500w,
+                img/once-in-a-lifetime-600.jpg   600w,
+                img/once-in-a-lifetime-800.jpg   800w,
+                img/once-in-a-lifetime-1000.jpg 1000w,
+                img/once-in-a-lifetime-1200.jpg 1200w
+              "
+              sizes="(max-width: 37.5em) 100vw, (max-width: 75em) 50vw, 600px"
+              alt="Woman in Carnaval costume dancing"
+              class="testimage" />
+
             <div class="travel-guides__section-a__sub-1">
               <h3 class="show-hover">
                 10 once-in-a-lifetime trips — and how to do them from a cruise
