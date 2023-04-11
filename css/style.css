@@ -1137,18 +1137,20 @@ body {
     display: block;
     border-radius: 10px;
     transition: transform 0.8s; }
-    .sponsored-cards__card img:hover {
-      transform: scale(1.1); }
   .sponsored-cards__card--md {
     flex: 0 1 41.6rem;
     position: relative;
     overflow: hidden;
     border-radius: 10px; }
+    .sponsored-cards__card--md:hover img {
+      transform: scale(1.06); }
   .sponsored-cards__card--sm {
     flex: 0 1 19.6rem;
     position: relative;
     overflow: hidden;
     border-radius: 10px; }
+    .sponsored-cards__card--sm:hover img {
+      transform: scale(1.06); }
   .sponsored-cards__destination {
     color: white;
     font-weight: 700;

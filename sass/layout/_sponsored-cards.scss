@@ -26,10 +26,6 @@
       display: block;
       border-radius: 10px;
       transition: transform 0.8s;
-
-      &:hover {
-        transform: scale(1.1);
-      }
     }
   }
 
@@ -38,12 +34,20 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+
+    &:hover img {
+      transform: scale(1.06);
+    }
   }
   &__card--sm {
     flex: 0 1 19.6rem;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+
+    &:hover img {
+      transform: scale(1.06);
+    }
   }
   &__destination {
     color: white;
