@@ -763,7 +763,8 @@ body {
     left: 50%;
     padding: var(--spacing-0-8);
     transform: translateX(-50%);
-    border-radius: var(--border-radius-md); }
+    border-top-left-radius: var(--border-radius-md);
+    border-top-right-radius: var(--border-radius-md); }
     @media only screen and (max-width: 56.25em) {
       .hero__text-container {
         width: 100%;

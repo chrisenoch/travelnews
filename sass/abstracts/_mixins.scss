@@ -98,6 +98,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   @if $breakpoint == tab-port-s {
     @media only screen and (max-width: 47.5em) {
       @content;
+      //760
     }
   }
   @if $breakpoint == tab-port {
@@ -108,7 +109,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   @if $breakpoint == tab-land-s {
     @media only screen and (max-width: 62.5em) {
       @content;
-    } //1200px
+    } //1000px
   }
   @if $breakpoint == tab-land {
     @media only screen and (max-width: 75em) {
