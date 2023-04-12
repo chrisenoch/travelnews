@@ -84,19 +84,15 @@
 
     @include respond(tab-land) {
       display: grid;
-      // grid-template-columns: repeat(4, 1fr);
-      // grid-column: span 12;
       grid-column: 7 / 13;
-      // grid-row: 1 / 2;
       gap: var(--spacing-1-6);
     }
 
     @include respond(phone) {
       grid-column: span 12;
       display: grid;
-
       grid-template-columns: repeat(2, 1fr);
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
     }
 
     h3 {

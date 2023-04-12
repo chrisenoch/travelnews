@@ -998,7 +998,7 @@ body {
         grid-column: span 12;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); } }
+        grid-template-columns: repeat(auto-fit, minmax(188px, 1fr)); } }
     .travel-news__section-c h3 {
       font-family: "Andada Pro", serif;
       font-size: 1.6rem;
