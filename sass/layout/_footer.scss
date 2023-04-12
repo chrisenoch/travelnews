@@ -2,6 +2,9 @@
   @include respond(phone-s) {
     @include t-1-4;
   }
+  @include respond(phone) {
+    margin-top: var(--spacing-6-4);
+  }
 
   color: white;
   @include t-1-6;
