@@ -1200,6 +1200,7 @@ body {
   font-size: 1.6rem;
   font-size: clamp(16px, 1.6rem, 1.6rem);
   background-color: black;
+  background-color: var(--color-secondary-dark);
   width: 100%;
   position: fixed;
   top: 0px;
@@ -1263,7 +1264,7 @@ body {
       color: var(--color-text);
       color: white; }
     .nav__link:hover, .nav__link:active {
-      color: var(--color-tertiary-light); }
+      border-bottom: 1px solid var(--color-tertiary); }
   .nav__cta {
     background-color: white;
     padding: var(--spacing-0-8) var(--spacing-1-6);
