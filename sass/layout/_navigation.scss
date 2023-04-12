@@ -10,6 +10,11 @@
   white-space: nowrap;
 
   &__container {
+    @include respond(phone-xs) {
+      padding: 0;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100%;
+    }
     height: 100%;
     // width: 120rem;
     max-width: 1220px;
@@ -26,9 +31,16 @@
     @include respond(tab-land) {
       margin-left: 65px;
     }
+    @include respond(phone-xs) {
+      margin-left: 0;
+    }
   }
 
   &__left {
+    @include respond(phone-xs) {
+      margin-left: 7rem; // Must be same value as width of hamburger__button from hamburger.scss
+      text-align: center;
+    }
   }
 
   &__right {

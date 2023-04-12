@@ -1210,12 +1210,24 @@ body {
     display: grid;
     grid-template-columns: minmax(min-content, max-content) 1fr;
     align-items: center; }
+    @media only screen and (max-width: 22.8em) {
+      .nav__container {
+        padding: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100%; } }
   .nav__logo {
     height: 35px;
     vertical-align: middle; }
     @media only screen and (max-width: 75em) {
       .nav__logo {
         margin-left: 65px; } }
+    @media only screen and (max-width: 22.8em) {
+      .nav__logo {
+        margin-left: 0; } }
+  @media only screen and (max-width: 22.8em) {
+    .nav__left {
+      margin-left: 7rem;
+      text-align: center; } }
   .nav__right {
     display: flex;
     justify-content: flex-end;
