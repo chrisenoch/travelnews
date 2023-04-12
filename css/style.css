@@ -673,6 +673,9 @@ body {
         font-size: clamp(16px, 1.6rem, 1.6rem);
         width: 100%;
         height: auto; } }
+    @media only screen and (max-width: 22.8em) {
+      .hamburger__container {
+        height: 100vh; } }
   .hamburger__close-button {
     position: absolute;
     top: 0px;
@@ -689,6 +692,8 @@ body {
       .hamburger__list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        column-gap: var(--spacing-4-8);
+        row-gap: var(--spacing-2-4);
         padding: 0 var(--spacing-2-4);
         border-top: 2px solid #0c4879; } }
   .hamburger__list-container {
