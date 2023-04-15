@@ -1201,6 +1201,8 @@ body {
   font-size: clamp(16px, 1.6rem, 1.6rem);
   background-color: black;
   background-color: var(--color-secondary-dark);
+  border-top: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 1px solid #031320;
   width: 100%;
   position: fixed;
   top: 0px;
