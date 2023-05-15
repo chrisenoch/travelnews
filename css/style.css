@@ -1169,14 +1169,10 @@ body {
     width: 41.6rem;
     /* width of two small cards plus gap from sponsored-cards__container class  */ }
   .sponsored-cards__card .was-auto-resized {
-    height: 20rem; }
-  .sponsored-cards__card img {
     height: 20rem;
-    height: inherit;
-    object-fit: cover;
-    object-position: center;
+    width: 100%; }
+  .sponsored-cards__card img {
     filter: brightness(80%);
-    width: 100%;
     display: block;
     border-radius: 10px;
     transition: transform 0.8s; }
