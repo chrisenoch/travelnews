@@ -58,7 +58,7 @@
     }
 
     .was-auto-resized {
-      min-width: 23rem;
+      min-width: 23rem; /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
       max-width: 23rem;
       max-height: 13.8rem;
 
@@ -73,12 +73,6 @@
     img {
       object-fit: cover;
       object-position: center;
-      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
-      min-width: inherit;
-      max-width: inherit;
-      max-height: inherit;
-      width: inherit;
-      height: inherit;
       border-radius: var(--border-radius-md);
 
       @include respond(tab-land) {
@@ -96,13 +90,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-1-6);
 
-    img {
-      object-fit: cover;
-      object-position: center;
-      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
-      min-width: 18rem;
+    .was-auto-resized {
+      min-width: 18rem; /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
       max-width: 18rem;
       height: 10.8rem;
+    }
+
+    img {
       border-radius: var(--border-radius-md);
     }
 
