@@ -17,8 +17,12 @@
   }
 
   &__card {
+    .was-auto-resized {
+      height: 20rem;
+    }
     img {
       height: 20rem;
+      height: inherit;
       object-fit: cover;
       object-position: center;
       filter: brightness(80%);
