@@ -1277,12 +1277,15 @@ body {
     .nav__item--1 {
       display: none; } }
   .nav__link {
-    text-decoration: none; }
+    text-decoration: none;
+    padding-bottom: 4px; }
     .nav__link:link, .nav__link:visited {
       color: var(--color-text);
       color: white; }
     .nav__link:hover, .nav__link:active {
       border-bottom: 1px solid var(--color-tertiary); }
+    .nav__link.nav__cta {
+      border-bottom: none; }
   .nav__cta {
     background-color: white;
     padding: var(--spacing-0-8) var(--spacing-1-6);

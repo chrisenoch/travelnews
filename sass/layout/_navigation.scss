@@ -97,6 +97,7 @@
 
   &__link {
     text-decoration: none;
+    padding-bottom: 4px;
 
     &:link,
     &:visited {
@@ -107,6 +108,10 @@
     &:hover,
     &:active {
       border-bottom: 1px solid var(--color-tertiary);
+    }
+
+    &.nav__cta {
+      border-bottom: none;
     }
   }
 
