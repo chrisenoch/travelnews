@@ -16,6 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet" />
     <script defer src="js/hamburger.js"></script>
+    <script type="module" src="js/renderImagesController.js"></script>
+    <script type="module" src="js/renderImages.js"></script>
   </head>
   <body>
     <header>
@@ -90,17 +92,17 @@
     <div class="hero">
       <img
         srcset="
-          img/pixabay/taj-mahal-420.jpg          420w,
-          img/pixabay/taj-mahal-500.jpg          500w,
-          img/pixabay/taj-mahal-640-426.jpg      640w,
-          img/pixabay/taj-mahal-1280-853.jpg    1280w,
-          img/pixabay/taj-mahal-1920-1280.jpg   1920w,
-          img/pixabay/taj-mahal-54327-3648.jpg 54327w
+          img/pixabay/taj-mahal-420.jpeg   420w,
+          img/pixabay/taj-mahal-500.jpeg   500w,
+          img/pixabay/taj-mahal-640.jpeg   640w,
+          img/pixabay/taj-mahal-1280.jpeg 1280w,
+          img/pixabay/taj-mahal-1920.jpeg 1920w,
+          img/pixabay/taj-mahal-5472.jpeg 5472w
         "
         sizes="100vw"
         alt="Taj Mihal"
         class="hero__image"
-        src="img/pixabay/taj-mahal-1920-1280.jpg" />
+        src="img/pixabay/taj-mahal-1920.jpeg" />
 
       <a href="#" class="hero__link">
         <div class="hero__text-container">
@@ -121,16 +123,17 @@
           <a href="#">
             <img
               srcset="
-                img/once-in-a-lifetime-400.jpg   400w,
-                img/once-in-a-lifetime-500.jpg   500w,
-                img/once-in-a-lifetime-600.jpg   600w,
-                img/once-in-a-lifetime-800.jpg   800w,
-                img/once-in-a-lifetime-1000.jpg 1000w,
-                img/once-in-a-lifetime-1200.jpg 1200w
+                img/once-in-a-lifetime-400.jpeg   400w,
+                img/once-in-a-lifetime-500.jpeg   500w,
+                img/once-in-a-lifetime-600.jpeg   600w,
+                img/once-in-a-lifetime-800.jpeg   800w,
+                img/once-in-a-lifetime-1000.jpeg 1000w,
+                img/once-in-a-lifetime-1200.jpeg 1200w
               "
               sizes="(max-width: 37.5em) 100vw, (max-width: 75em) 50vw, 600px"
               alt="Woman in Carnaval costume dancing"
-              src="img/once-in-a-lifetime-1200.jpg" />
+              src="img/once-in-a-lifetime-1200.jpeg"
+              class="lifetime" />
 
             <div class="travel-guides__section-a__sub-1">
               <h3 class="show-hover">
@@ -148,10 +151,12 @@
         <div class="travel-guides__section-b">
           <a href="#">
             <div class="travel-guides__section-b__container">
-              <img
-                src="img/lake-filled.jpg"
-                alt="Enniskillen castle by the lake"
-                loading="lazy" />
+              <div class="auto-resize">
+                <img
+                  src="img/lake-filled_lg-2200.jpeg"
+                  alt="Enniskillen castle by the lake"
+                  loading="lazy" />
+              </div>
               <div class="travel-guides__section-b__sub-1">
                 <article>
                   <h3 class="show-hover">
@@ -167,10 +172,12 @@
           </a>
           <a href="#">
             <div class="travel-guides__section-b__container">
-              <img
-                src="img/scandi_weekend.jpg"
-                alt="Juvet Landscape Hotel"
-                loading="lazy" />
+              <div class="auto-resize">
+                <img
+                  src="img/scandi_weekend-2200.jpeg"
+                  alt="Juvet Landscape Hotel"
+                  loading="lazy" />
+              </div>
               <div class="travel-guides__section-b__sub-1">
                 <article>
                   <h3 class="show-hover">
@@ -187,10 +194,12 @@
           </a>
           <a href="#">
             <div class="travel-guides__section-b__container">
-              <img
-                src="img/guyana.jpg"
-                alt="Kaieteur Falls, Guyana"
-                loading="lazy" />
+              <div class="auto-resize">
+                <img
+                  src="img/guyana-2200.jpeg"
+                  alt="Kaieteur Falls, Guyana"
+                  loading="lazy" />
+              </div>
               <div class="travel-guides__section-b__sub-1">
                 <article>
                   <h3 class="show-hover">
@@ -208,11 +217,13 @@
           </a>
           <a href="#">
             <div class="travel-guides__section-b__container">
-              <img
-                src="img/Narilka fortress Tbilisi.jpg"
-                alt="Narilka fortress,
+              <div class="auto-resize">
+                <img
+                  src="img/Narilka fortress Tbilisi-2200.jpeg"
+                  alt="Narilka fortress,
           Tbilisi"
-                loading="lazy" />
+                  loading="lazy" />
+              </div>
               <div class="travel-guides__section-b__sub-1">
                 <article>
                   <h3 class="show-hover">
@@ -230,10 +241,12 @@
         </div>
         <div class="travel-guides__section-c">
           <a href="#" class="travel-guides__section-c__sub-1">
-            <img
-              src="img/giraffes_south_africa.jpg"
-              alt="a family of giraffes in South Africa"
-              loading="lazy" />
+            <div class="auto-resize">
+              <img
+                src="img/giraffes_south_africa-2200.jpeg"
+                alt="a family of giraffes in South Africa"
+                loading="lazy" />
+            </div>
             <h3 class="show-hover">
               The affordable way to get thrillingly close to the Big Five
             </h3>
@@ -241,10 +254,18 @@
         </div>
         <div class="travel-guides__section-c">
           <a href="#" class="travel-guides__section-c__sub-1">
-            <img
-              src="img/six_brilliant_destinations.jpg"
-              alt="a family of giraffes in South Africa"
-              loading="lazy" />
+            <div class="auto-resize">
+              <img
+                src="img/six_brilliant_destinations-2200.jpeg"
+                alt="path between a valley"
+                loading="lazy" />
+            </div>
+
+            <!-- <img
+                src="img/six_brilliant_destinations.jpeg"
+                alt="a family of giraffes in South Africa"
+                loading="lazy" /> -->
+
             <h3 class="show-hover">
               Six brilliant destinations that are even better in the off-season
             </h3>
@@ -252,20 +273,24 @@
         </div>
         <div class="travel-guides__section-c">
           <a href="#" class="travel-guides__section-c__sub-1">
-            <img
-              src="img/virgin_cruises.jpg"
-              alt="a family of giraffes in South Africa"
-              loading="lazy" />
+            <div class="auto-resize">
+              <img
+                src="img/virgin_cruises-2200.jpeg"
+                alt="people drinking champagne on a cruise"
+                loading="lazy" />
+            </div>
             <h3 class="show-hover">Virgin Voyages offers adult-only cruises</h3>
           </a>
         </div>
 
         <div class="travel-guides__section-c">
           <a href="#" class="travel-guides__section-c__sub-1">
-            <img
-              src="img/marbella_elix_greece.jpg"
-              alt="Marbella Eliz hotel, Greece"
-              loading="lazy" />
+            <div class="auto-resize">
+              <img
+                src="img/marbella_elix_greece-2200.jpeg"
+                alt="Marbella Eliz hotel, Greece"
+                loading="lazy" />
+            </div>
             <h3 class="show-hover">
               Win a luxury break for two in Greece with MarBella Elix and
               Classic Collection
@@ -283,11 +308,13 @@
             class="sponsored-cards__card sponsored-cards__card--md"
             id="sponsored-card-1">
             <a href="#">
-              <img
-                src="img/cala-llombards-shutterstock.jpg"
-                alt="Cala Llombards, Majorca"
-                loading="lazy"
-                id="sponsored-card-img-1" />
+              <div class="auto-resize">
+                <img
+                  src="img/cala-llombards-shutterstock-2200.jpeg"
+                  alt="Cala Llombards, Majorca"
+                  loading="lazy"
+                  id="sponsored-card-img-1" />
+              </div>
               <span class="sponsored-cards__destination">Majorca</span>
               <span class="sponsored-cards__price">from £299pp</span>
             </a>
@@ -297,11 +324,13 @@
               class="sponsored-cards__card sponsored-cards__card--sm"
               id="sponsored-card-2">
               <a href="#">
-                <img
-                  src="img/barcelona-shutterstock.jpg"
-                  alt="Barcelona skyline"
-                  loading="lazy"
-                  id="sponsored-card-img-2" />
+                <div class="auto-resize">
+                  <img
+                    src="img/barcelona-shutterstock-2200.jpeg"
+                    alt="Barcelona skyline"
+                    loading="lazy"
+                    id="sponsored-card-img-2" />
+                </div>
                 <span class="sponsored-cards__destination">Barcelona</span>
                 <span class="sponsored-cards__price">from £149pp</span>
               </a>
@@ -310,11 +339,13 @@
               class="sponsored-cards__card sponsored-cards__card--sm"
               id="sponsored-card-3">
               <a href="#">
-                <img
-                  src="img/amsterdam-shutterstock.jpg"
-                  alt="Canal in Amsterdam"
-                  loading="lazy"
-                  id="sponsored-card-img-3" />
+                <div class="auto-resize">
+                  <img
+                    src="img/amsterdam-shutterstock-2200.jpeg"
+                    alt="Canal in Amsterdam"
+                    loading="lazy"
+                    id="sponsored-card-img-3" />
+                </div>
                 <span class="sponsored-cards__destination">Amsterdam</span>
                 <span class="sponsored-cards__price">from £199pp</span>
               </a>
@@ -327,11 +358,13 @@
               class="sponsored-cards__card sponsored-cards__card--sm"
               id="sponsored-card-4">
               <a href="#">
-                <img
-                  src="img/fuerteventura-shutterstock.jpg"
-                  alt="Cove in Fuerteventura"
-                  loading="lazy"
-                  id="sponsored-card-img-4" />
+                <div class="auto-resize">
+                  <img
+                    src="img/fuerteventura-shutterstock-2200.jpeg"
+                    alt="Cove in Fuerteventura"
+                    loading="lazy"
+                    id="sponsored-card-img-4" />
+                </div>
                 <span class="sponsored-cards__destination">Fuerteventura</span>
                 <span class="sponsored-cards__price">from £299pp</span>
               </a>
@@ -340,11 +373,13 @@
               class="sponsored-cards__card sponsored-cards__card--sm"
               id="sponsored-card-5">
               <a href="#">
-                <img
-                  src="img/antalya-shutterstock.jpg"
-                  alt="Analya, Turkey"
-                  loading="lazy"
-                  id="sponsored-card-img-5" />
+                <div class="auto-resize">
+                  <img
+                    src="img/antalya-shutterstock-2200.jpeg"
+                    alt="Analya, Turkey"
+                    loading="lazy"
+                    id="sponsored-card-img-5" />
+                </div>
                 <span class="sponsored-cards__destination">Antalya</span>
                 <span class="sponsored-cards__price">from £359pp</span>
               </a>
@@ -354,11 +389,13 @@
             class="sponsored-cards__card sponsored-cards__card--md"
             id="sponsored-card-6">
             <a href="#">
-              <img
-                src="img/tenerife-shutterstock.jpg"
-                alt="Beach in Tenerife"
-                loading="lazy"
-                id="sponsored-card-img-6" />
+              <div class="auto-resize">
+                <img
+                  src="img/tenerife-shutterstock-2200.jpeg"
+                  alt="Beach in Tenerife"
+                  loading="lazy"
+                  id="sponsored-card-img-6" />
+              </div>
               <span class="sponsored-cards__destination">Tenerife</span>
               <span class="sponsored-cards__price">from £199pp</span>
             </a>
@@ -401,15 +438,15 @@
             <a href="#">
               <img
                 srcset="
-                  img/disney-world-400.jpg   400w,
-                  img/disney-world-600.jpg   600w,
-                  img/disney-world-800.jpg   800w,
-                  img/disney-world-1000.jpg 1000w,
-                  img/disney-world.jpg      1200w
+                  img/disney-world-400.jpeg   400w,
+                  img/disney-world-600.jpeg   600w,
+                  img/disney-world-800.jpeg   800w,
+                  img/disney-world-1000.jpeg 1000w,
+                  img/disney-world-1200.jpeg 1200w
                 "
                 sizes="(max-width: 22.8em) 95vw, (max-width: 31.25em) 96vw, (max-width: 37.5em) 97vw, (max-width: 47.5em) 47vw, (max-width: 75em) 48vw, 515px"
                 alt="Disney World"
-                src="img/disney-world.jpg" />
+                src="img/disney-world-1200.jpeg" />
             </a>
           </div>
         </div>
@@ -454,10 +491,12 @@
       <section class="travel-news-two">
         <div class="travel-news-two__section-a">
           <a class="travel-news-two__section-a__container" href="#">
-            <img
-              src="img/Amsterdam-585x390.jpg"
-              alt="Amsterdam at night"
-              loading="lazy" />
+            <div class="auto-resize">
+              <img
+                src="img/Amsterdam-585x390-2200.jpeg"
+                alt="Amsterdam at night"
+                loading="lazy" />
+            </div>
             <div>
               <h3 class="show-hover">
                 Amsterdam: Campaign to keep out rowdy tourists
@@ -473,10 +512,12 @@
           </a>
 
           <a class="travel-news-two__section-a__container" href="#">
-            <img
-              src="img/pantheon-3398466_1920-1170x781.jpg"
-              alt="Pantheon, Rome"
-              loading="lazy" />
+            <div class="auto-resize">
+              <img
+                src="img/pantheon-3398466_1920-1170x781-2200.jpeg"
+                alt="Pantheon, Rome"
+                loading="lazy" />
+            </div>
 
             <div>
               <h3 class="show-hover">The Pantheon to impose an entry fee</h3>
@@ -489,10 +530,12 @@
           <a
             class="travel-news-two__section-a__container show-tab-land-flex"
             href="#">
-            <img
-              src="img/Brittany-Ferries-1170x814.jpg"
-              alt="Brittany ferry"
-              loading="lazy" />
+            <div class="auto-resize">
+              <img
+                src="img/Brittany-Ferries-1170x814-2200.jpeg"
+                alt="Brittany ferry"
+                loading="lazy" />
+            </div>
 
             <div>
               <h3 class="show-hover">
@@ -507,10 +550,12 @@
           <a
             class="travel-news-two__section-a__container show-tab-land-flex"
             href="#">
-            <img
-              src="img/mountain-lion.jpg"
-              alt="Mountain lion"
-              loading="lazy" />
+            <div class="auto-resize">
+              <img
+                src="img/mountain-lion-2200.jpeg"
+                alt="Mountain lion"
+                loading="lazy" />
+            </div>
 
             <div>
               <h3 class="show-hover">
@@ -526,10 +571,12 @@
         <div class="travel-news-two__section-b">
           <article class="travel-news-two__section-b__sub-1 hide-tab-land">
             <a href="#">
-              <img
-                src="img/Brittany-Ferries-1170x814.jpg"
-                alt="Brittany ferry"
-                loading="lazy" />
+              <div class="auto-resize">
+                <img
+                  src="img/Brittany-Ferries-1170x814-2200.jpeg"
+                  alt="Brittany ferry"
+                  loading="lazy" />
+              </div>
 
               <h3 class="show-hover">
                 Brittany Ferries ditches dual pricing on board
@@ -543,10 +590,12 @@
 
           <article class="travel-news-two__section-b__sub-1 hide-tab-land">
             <a href="#">
-              <img
-                src="img/mountain-lion.jpg"
-                alt="Mountain Lion"
-                loading="lazy" />
+              <div class="auto-resize">
+                <img
+                  src="img/mountain-lion-2200.jpeg"
+                  alt="Mountain Lion"
+                  loading="lazy" />
+              </div>
 
               <h3 class="show-hover">
                 Mountain lion attacks tourist in a pool in Colorado
@@ -560,10 +609,12 @@
 
           <article class="travel-news-two__section-b__sub-1 hide-tab-land">
             <a href="#">
-              <img
-                src="img/aito-conference.jpg"
-                alt="Thessaloniki, Greece"
-                loading="lazy" />
+              <div class="auto-resize">
+                <img
+                  src="img/aito-conference-2200.jpeg"
+                  alt="Thessaloniki, Greece"
+                  loading="lazy" />
+              </div>
 
               <h3 class="show-hover">Aito reveals 2023 conference location</h3>
               <p>

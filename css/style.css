@@ -545,6 +545,18 @@ body {
   padding: var(--spacing-1-6);
   border-radius: 20px; }
 
+.auto-resize img {
+  display: none !important; }
+
+.was-auto-resized img {
+  height: inherit;
+  width: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  object-fit: cover; }
+
 .section-heading {
   padding-top: var(--spacing-9-6);
   display: grid;
@@ -861,13 +873,12 @@ body {
     .travel-guides__section-b__container {
       display: grid;
       grid-template-columns: repeat(2, 8.85rem) repeat(4, 1fr); }
+      .travel-guides__section-b__container .was-auto-resized {
+        width: 17.7rem;
+        height: 11.8rem;
+        height: 13rem; }
     .travel-guides__section-b img {
       grid-column: 1 / 3;
-      object-fit: cover;
-      object-position: center;
-      width: 17.7rem;
-      height: 11.8rem;
-      height: 13rem;
       border-radius: var(--border-radius-md); }
     .travel-guides__section-b__sub-1 {
       grid-column: 3 / 7; }
@@ -903,13 +914,12 @@ body {
         .travel-guides__section-c__sub-1 {
           display: flex;
           flex-wrap: wrap; } }
+      .travel-guides__section-c__sub-1 .was-auto-resized {
+        max-height: 16rem;
+        width: 100%;
+        grid-column: span 2; }
     .travel-guides__section-c img {
-      grid-column: span 2;
-      max-height: 16rem;
-      width: 28.2rem;
-      width: 100%;
-      object-fit: cover;
-      object-position: 50% 20%;
+      max-height: inherit;
       border-radius: var(--border-radius-md); }
       @media only screen and (max-width: 56.25em) {
         .travel-guides__section-c img {
@@ -1089,31 +1099,38 @@ body {
         .travel-news-two__section-a h3 {
           font-size: 1.6rem;
           font-size: clamp(16px, 1.6rem, 1.6rem); } }
+    .travel-news-two__section-a .was-auto-resized {
+      min-width: 23rem;
+      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
+      max-width: 23rem;
+      max-height: 13.8rem; }
+      @media only screen and (max-width: 75em) {
+        .travel-news-two__section-a .was-auto-resized {
+          max-width: 100%;
+          height: 16rem;
+          width: 100%;
+          min-width: 0px; } }
     .travel-news-two__section-a img {
       object-fit: cover;
       object-position: center;
-      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
-      min-width: 23rem;
-      max-width: 23rem;
-      max-height: 13.8rem;
       border-radius: var(--border-radius-md); }
       @media only screen and (max-width: 75em) {
         .travel-news-two__section-a img {
-          max-width: 100%;
-          height: 16rem;
-          min-width: 0px; } }
+          max-width: inherit;
+          height: inherit;
+          width: inherit;
+          min-width: inherit; } }
   .travel-news-two__section-b {
     grid-column: span 6;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-1-6); }
-    .travel-news-two__section-b img {
-      object-fit: cover;
-      object-position: center;
-      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
+    .travel-news-two__section-b .was-auto-resized {
       min-width: 18rem;
+      /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
       max-width: 18rem;
-      height: 10.8rem;
+      height: 10.8rem; }
+    .travel-news-two__section-b img {
       border-radius: var(--border-radius-md); }
     .travel-news-two__section-b h3 {
       font-size: 2rem;
@@ -1146,12 +1163,11 @@ body {
     gap: var(--spacing-2-4);
     width: 41.6rem;
     /* width of two small cards plus gap from sponsored-cards__container class  */ }
-  .sponsored-cards__card img {
+  .sponsored-cards__card .was-auto-resized {
     height: 20rem;
-    object-fit: cover;
-    object-position: center;
+    width: 100%; }
+  .sponsored-cards__card img {
     filter: brightness(80%);
-    width: 100%;
     display: block;
     border-radius: 10px;
     transition: transform 0.8s; }

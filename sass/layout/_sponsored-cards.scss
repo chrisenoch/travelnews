@@ -17,12 +17,12 @@
   }
 
   &__card {
-    img {
+    .was-auto-resized {
       height: 20rem;
-      object-fit: cover;
-      object-position: center;
-      filter: brightness(80%);
       width: 100%;
+    }
+    img {
+      filter: brightness(80%);
       display: block;
       border-radius: 10px;
       transition: transform 0.8s;

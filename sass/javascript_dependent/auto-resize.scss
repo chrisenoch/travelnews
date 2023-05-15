@@ -1,0 +1,13 @@
+.auto-resize img {
+  display: none !important;
+}
+
+.was-auto-resized img {
+  height: inherit;
+  width: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  object-fit: cover;
+}
