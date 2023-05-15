@@ -97,7 +97,10 @@
 
   &__link {
     text-decoration: none;
-    padding-bottom: 4px;
+
+    &:not(.nav__cta) {
+      padding-bottom: 4px;
+    }
 
     &:link,
     &:visited {

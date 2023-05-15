@@ -1277,8 +1277,9 @@ body {
     .nav__item--1 {
       display: none; } }
   .nav__link {
-    text-decoration: none;
-    padding-bottom: 4px; }
+    text-decoration: none; }
+    .nav__link:not(.nav__cta) {
+      padding-bottom: 4px; }
     .nav__link:link, .nav__link:visited {
       color: var(--color-text);
       color: white; }
