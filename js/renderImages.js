@@ -1,15 +1,18 @@
-'use strict'
+export { runScript }
 
-//available image widths (images for each of these widths are always available);
-const availableWidths = [400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1400, 1600, 1800, 2000, 2100, 2200];
-const images = getImageArr();
-renderImages(images, availableWidths, true);
-let onResizeFinish;
-window.addEventListener("resize", () => { //Idea for how to resize on finished resize from: https://www.geeksforgeeks.org/how-to-wait-resize-end-event-and-then-perform-an-action-using-javascript/
-    clearTimeout(onResizeFinish);
-    onResizeFinish = setTimeout(() => renderImagesOnResize(images, availableWidths), 100);
-});
-window.addEventListener("resize", () => console.log(getDevicePixelRatio()));
+function runScript(availableWidths) {
+    if (availableWidths < 1) {
+        throw new Error('you must pass an array of available image widths before this script can be started');
+    }
+
+    const images = getImageArr();
+    renderImages(images, availableWidths, true);
+    let onResizeFinish;
+    window.addEventListener("resize", () => { //Idea for how to resize on finished resize from: https://www.geeksforgeeks.org/how-to-wait-resize-end-event-and-then-perform-an-action-using-javascript/
+        clearTimeout(onResizeFinish);
+        onResizeFinish = setTimeout(() => renderImagesOnResize(images, availableWidths), 100);
+    });
+}
 
 function renderImagesOnResize(images, availableWidths) {
     //render a new size for existing images
@@ -31,7 +34,6 @@ function renderImages(images, availableWidths, isFirstRender) { //imageContainer
 
     let imageContainerClass = isFirstRender ? 'auto-resize' : 'was-auto-resized';
     images.forEach((image) => {
-        //get parent
         let imageContainer = findClosestParentWithClass(image, imageContainerClass);
         if (!imageContainer) {
             console.error("Error: - No imageContainer detected. Each image should have one image container");
