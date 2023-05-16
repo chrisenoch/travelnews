@@ -44,29 +44,34 @@ function renderImages(images, availableWidths, isFirstRender) { //imageContainer
         let idealWidth = renderedWidth * DPR;
         let src = image.src;
         let imageSizeToRender = getImageSize(idealWidth, availableWidths);//find an avilable image which is closest fit to idealWidth
-        let pathSeparator = getPathSeparator(src);
 
-        //E.g. src: 'http://127.0.0.1:5500/img/pixabay/taj-mahal-1920-1280.jpg'
-        if (src[src.length - 1] === pathSeparator) {
-            src = src.substring(0, src.lastIndexOf(pathSeparator));
-        }
-        let fileExt = src.substring(src.lastIndexOf('.') + 1);
-        let imageDir = pathSeparator ? src.substring(0, src.lastIndexOf(pathSeparator)) : "";
-        imageDir += pathSeparator;
-        let imageName;
-        if (pathSeparator) {
-            imageName = src.substring(src.lastIndexOf(pathSeparator) + 1);
-            imageName = imageName.substring(0, imageName.lastIndexOf('.'));
-            let imageSizeExt = getImageSizeExt(imageName);//check if image ends in number. E.g. beach-500
-            if (imageSizeExt) { //delete from imageName
-                imageName = imageName.substring(0, imageName.lastIndexOf(imageSizeExt));
+        //only manipulate the image if imageSizeToRender returns a size
+        if (imageSizeToRender) {
+            let pathSeparator = getPathSeparator(src);
+
+            //E.g. src: 'http://127.0.0.1:5500/img/pixabay/taj-mahal-1920-1280.jpg'
+            if (src[src.length - 1] === pathSeparator) {
+                src = src.substring(0, src.lastIndexOf(pathSeparator));
             }
+            let fileExt = src.substring(src.lastIndexOf('.') + 1);
+            let imageDir = pathSeparator ? src.substring(0, src.lastIndexOf(pathSeparator)) : "";
+            imageDir += pathSeparator;
+            let imageName;
+            if (pathSeparator) {
+                imageName = src.substring(src.lastIndexOf(pathSeparator) + 1);
+                imageName = imageName.substring(0, imageName.lastIndexOf('.'));
+                let imageSizeExt = getImageSizeExt(imageName);//check if image ends in number. E.g. beach-500
+                if (imageSizeExt) { //delete from imageName
+                    imageName = imageName.substring(0, imageName.lastIndexOf(imageSizeExt));
+                }
 
-        } else {
-            imageName = src;
+            } else {
+                imageName = src;
+            }
+            let newImage = imageDir + imageName + '-' + imageSizeToRender + '.' + fileExt;
+            image.src = newImage;
+
         }
-        let newImage = imageDir + imageName + '-' + imageSizeToRender + '.' + fileExt;
-        image.src = newImage;
 
         //remove class from imageContainer so as to display the image
         if (isFirstRender) {
@@ -108,8 +113,8 @@ function getImageSizeExt(imageName) {
 }
 
 function sortNumAsc(a, b) { return a - b };
-//could try binary search option mixed with looping. //imageSize = -1;
-//what if next image up is huge? don't show it? - see what browser does? test this
+
+//Returns the ideal size if available. If not, returns the next highest image size if a higher size exists. Finally if no higher image sizes exist, returns the highest available size out of the sizes that are less than the ideal size.
 function getImageSize(idealSize, availableSizes) {
     availableSizes = availableSizes.sort(sortNumAsc);
     let lowerVals = [];
@@ -132,9 +137,15 @@ function getImageSize(idealSize, availableSizes) {
     if (imageSize === idealSize) {
         return imageSize;
     } else if (higherVals.length < 1) {
-        //return highest possible value
-        imageSize = lowerVals[lowerVals.length - 1];
-        return imageSize;
+        //double check it exists
+        if (lowerVals.length > 0) {
+            //return highest possible value
+            imageSize = lowerVals[lowerVals.length - 1];
+            return imageSize;
+        } else {
+            return null;
+        }
+
     } else {
         imageSize = higherVals[0];
         return imageSize;
