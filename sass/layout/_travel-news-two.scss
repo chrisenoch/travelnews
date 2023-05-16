@@ -8,7 +8,7 @@
   &__section-a {
     grid-column: span 6;
 
-    @include respond(tab-land) {
+    @include respond(tab-land-s) {
       grid-column: span 12;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -28,7 +28,7 @@
       justify-content: start;
       padding-bottom: var(--spacing-2-4);
 
-      @include respond(tab-land) {
+      @include respond(tab-land-s) {
         flex-direction: column;
         p {
           display: none;
@@ -49,7 +49,7 @@
       padding-bottom: var(--spacing-0-4);
       font-family: "Andada Pro", serif;
 
-      @include respond(tab-land) {
+      @include respond(tab-land-s) {
         @include t-1-8;
       }
       @include respond(phone) {
@@ -62,7 +62,7 @@
       max-width: 23rem;
       max-height: 13.8rem;
 
-      @include respond(tab-land) {
+      @include respond(tab-land-s) {
         max-width: 100%;
         height: 16rem;
         width: 100%;
@@ -75,7 +75,7 @@
       object-position: center;
       border-radius: var(--border-radius-md);
 
-      @include respond(tab-land) {
+      @include respond(tab-land-s) {
         max-width: inherit;
         height: inherit;
         width: inherit;
@@ -105,7 +105,7 @@
       padding: var(--spacing-0-4) 0;
       font-family: "Andada Pro", serif;
 
-      @include respond(tab-land) {
+      @include respond(tab-land-s) {
         @include t-1-8;
       }
     }
@@ -114,7 +114,7 @@
       grid-column: span 1;
 
       p {
-        @include respond(tab-land) {
+        @include respond(tab-land-s) {
           display: none;
         }
       }

@@ -195,6 +195,10 @@ body {
   .hide-tab-land {
     display: none; } }
 
+@media only screen and (max-width: 62.5em) {
+  .hide-tab-land-s {
+    display: none; } }
+
 /* start hiding from tab-port and continue to hide for screens smaller than tab-port */
 @media only screen and (max-width: 56.25em) {
   .hide-tab-port {
@@ -267,6 +271,12 @@ body {
   display: none !important; }
   @media only screen and (max-width: 75em) {
     .show-tab-land-flex {
+      display: flex !important; } }
+
+.show-tab-land-s-flex {
+  display: none !important; }
+  @media only screen and (max-width: 62.5em) {
+    .show-tab-land-s-flex {
       display: flex !important; } }
 
 /* start showing from tab-port and continue to show for screens smaller than tab-port */
@@ -1025,10 +1035,6 @@ body {
       font-size: clamp(16px, 1.6rem, 1.6rem); }
       @media only screen and (max-width: 75em) {
         .travel-news__section-c h3 {
-          font-size: 1.8rem;
-          font-size: clamp(18px, 1.8rem, 1.8rem); } }
-      @media only screen and (max-width: 56.25em) {
-        .travel-news__section-c h3 {
           font-size: 1.6rem;
           font-size: clamp(16px, 1.6rem, 1.6rem); } }
     .travel-news__section-c h3:not(:last-child) {
@@ -1059,7 +1065,7 @@ body {
   padding-top: var(--spacing-2-4); }
   .travel-news-two__section-a {
     grid-column: span 6; }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 62.5em) {
       .travel-news-two__section-a {
         grid-column: span 12;
         display: grid;
@@ -1075,7 +1081,7 @@ body {
       gap: var(--spacing-0-8);
       justify-content: start;
       padding-bottom: var(--spacing-2-4); }
-      @media only screen and (max-width: 75em) {
+      @media only screen and (max-width: 62.5em) {
         .travel-news-two__section-a__container {
           flex-direction: column; }
           .travel-news-two__section-a__container p {
@@ -1091,7 +1097,7 @@ body {
       line-height: 1.4;
       padding-bottom: var(--spacing-0-4);
       font-family: "Andada Pro", serif; }
-      @media only screen and (max-width: 75em) {
+      @media only screen and (max-width: 62.5em) {
         .travel-news-two__section-a h3 {
           font-size: 1.8rem;
           font-size: clamp(18px, 1.8rem, 1.8rem); } }
@@ -1104,7 +1110,7 @@ body {
       /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
       max-width: 23rem;
       max-height: 13.8rem; }
-      @media only screen and (max-width: 75em) {
+      @media only screen and (max-width: 62.5em) {
         .travel-news-two__section-a .was-auto-resized {
           max-width: 100%;
           height: 16rem;
@@ -1114,7 +1120,7 @@ body {
       object-fit: cover;
       object-position: center;
       border-radius: var(--border-radius-md); }
-      @media only screen and (max-width: 75em) {
+      @media only screen and (max-width: 62.5em) {
         .travel-news-two__section-a img {
           max-width: inherit;
           height: inherit;
@@ -1138,13 +1144,13 @@ body {
       line-height: 1.4;
       padding: var(--spacing-0-4) 0;
       font-family: "Andada Pro", serif; }
-      @media only screen and (max-width: 75em) {
+      @media only screen and (max-width: 62.5em) {
         .travel-news-two__section-b h3 {
           font-size: 1.8rem;
           font-size: clamp(18px, 1.8rem, 1.8rem); } }
     .travel-news-two__section-b__sub-1 {
       grid-column: span 1; }
-      @media only screen and (max-width: 75em) {
+      @media only screen and (max-width: 62.5em) {
         .travel-news-two__section-b__sub-1 p {
           display: none; } }
 

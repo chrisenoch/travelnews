@@ -99,10 +99,13 @@
       font-family: "Andada Pro", serif;
       @include t-1-6;
 
+      // @include respond(tab-land) {
+      //   @include t-1-8;
+      // }
+      // @include respond(tab-port) {
+      //   @include t-1-6;
+      // }
       @include respond(tab-land) {
-        @include t-1-8;
-      }
-      @include respond(tab-port) {
         @include t-1-6;
       }
     }
