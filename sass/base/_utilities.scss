@@ -33,6 +33,12 @@
   }
 }
 
+.hide-tab-land-s {
+  @include respond(tab-land-s) {
+    display: none;
+  }
+}
+
 /* start hiding from tab-port and continue to hide for screens smaller than tab-port */
 .hide-tab-port {
   @include respond(tab-port) {
@@ -114,6 +120,13 @@
 .show-tab-land-flex {
   display: none !important;
   @include respond(tab-land) {
+    display: flex !important;
+  }
+}
+
+.show-tab-land-s-flex {
+  display: none !important;
+  @include respond(tab-land-s) {
     display: flex !important;
   }
 }
