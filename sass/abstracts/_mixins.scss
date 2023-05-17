@@ -168,11 +168,3 @@ ORDER: Base + typography > general layout + grid > page layout > components
     }
   }
 }
-
-.testMedia {
-  // @include show-tab-land-test(tab-land, block);
-  @include show-from-and-below(tab-land, block);
-
-  background-color: rgb(209, 23, 69);
-  height: 500px;
-}
