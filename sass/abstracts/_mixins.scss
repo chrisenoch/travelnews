@@ -1,5 +1,5 @@
 //FONT-SIZES
-//users can scale-up font-size but cannt scale-down font-size. From t-3-2 onwards, users given some margin to scale-down font-size
+//users can scale-up font-size but cannot scale-down font-size. From t-3-2 onwards, users given some margin to scale-down font-size
 //clamp used instead of max because sass compiler giving error with max. Clamp achieves the same.
 
 @mixin t-0-8 {
@@ -121,4 +121,50 @@ ORDER: Base + typography > general layout + grid > page layout > components
   //     @content;
   //   } //1800
   // }
+}
+
+@mixin hide-from-and-below($breakpoint) {
+  @include respond($breakpoint) {
+    display: none;
+  }
+}
+
+@mixin show-from-and-below($breakpoint, $displayProperty) {
+  display: none !important;
+  @include respond($breakpoint) {
+    display: $displayProperty !important;
+  }
+}
+
+@mixin show-only-for($breakpoint, $displayProperty) {
+  display: none !important;
+  @include respond($breakpoint) {
+    display: $displayProperty !important;
+  }
+
+  $hideFrom: null;
+  @if $breakpoint == tab-land {
+    $hideFrom: tab-land-s;
+  }
+  @if $breakpoint == tab-land-s {
+    $hideFrom: tab-port;
+  }
+  @if $breakpoint == tab-port {
+    $hideFrom: tab-port-s;
+  }
+  @if $breakpoint == tab-port-s {
+    $hideFrom: phone;
+  }
+  @if $breakpoint == phone {
+    $hideFrom: phone-s;
+  }
+  @if $breakpoint == phone-s {
+    $hideFrom: phone-xs;
+  }
+
+  @if $hideFrom {
+    @include respond($hideFrom) {
+      display: none !important;
+    }
+  }
 }

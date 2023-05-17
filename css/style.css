@@ -205,9 +205,24 @@ body {
   .hide-tab-port {
     display: none; } }
 
+/* start hiding from tab-port-s and continue to hide for screens smaller than tab-port-s */
+@media only screen and (max-width: 47.5em) {
+  .hide-tab-port-s {
+    display: none; } }
+
 /* start hiding from phone and continue to hide for screens smaller than phone */
 @media only screen and (max-width: 37.5em) {
   .hide-phone {
+    display: none; } }
+
+/* start hiding from phone-s and continue to hide for screens smaller than phone-s */
+@media only screen and (max-width: 31.25em) {
+  .hide-phone-s {
+    display: none; } }
+
+/* start hiding from phone-xs and continue to hide for screens smaller than phone-xs */
+@media only screen and (max-width: 22.8em) {
+  .hide-phone-xs {
     display: none; } }
 
 /* start showing from tab-land and continue to show for screens smaller than tab-land */
@@ -231,6 +246,13 @@ body {
     .show-tab-port {
       display: block !important; } }
 
+/* start showing from tab-port-s and continue to show for screens smaller than tab-port-s */
+.show-tab-port-s {
+  display: none !important; }
+  @media only screen and (max-width: 47.5em) {
+    .show-tab-port-s {
+      display: block !important; } }
+
 /* start showing from phone and continue to show for screens smaller than phone */
 .show-phone {
   display: none !important; }
@@ -238,40 +260,78 @@ body {
     .show-phone {
       display: block !important; } }
 
-.show-only-tab-port {
+/* start showing from phone-s and continue to show for screens smaller than phone-s */
+.show-phone-s {
   display: none !important; }
-  @media only screen and (max-width: 75em) {
-    .show-only-tab-port {
-      display: none !important; } }
-  @media only screen and (max-width: 56.25em) {
-    .show-only-tab-port {
+  @media only screen and (max-width: 31.25em) {
+    .show-phone-s {
       display: block !important; } }
-  @media only screen and (max-width: 37.5em) {
-    .show-only-tab-port {
-      display: none !important; } }
+
+/* start showing from phone-xs and continue to show for screens smaller than phone-xs */
+.show-phone-xs {
+  display: none !important; }
+  @media only screen and (max-width: 22.8em) {
+    .show-phone-xs {
+      display: block !important; } }
 
 .show-only-tab-land {
   display: none !important; }
   @media only screen and (max-width: 75em) {
     .show-only-tab-land {
       display: block !important; } }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 62.5em) {
     .show-only-tab-land {
       display: none !important; } }
+
+.show-only-tab-land-s {
+  display: none !important; }
+  @media only screen and (max-width: 62.5em) {
+    .show-only-tab-land-s {
+      display: block !important; } }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-tab-land-s {
+      display: none !important; } }
+
+.show-only-tab-port {
+  display: none !important; }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-tab-port {
+      display: block !important; } }
+  @media only screen and (max-width: 47.5em) {
+    .show-only-tab-port {
+      display: none !important; } }
+
+.show-only-tab-port-s {
+  display: none !important; }
+  @media only screen and (max-width: 47.5em) {
+    .show-only-tab-port-s {
+      display: block !important; } }
   @media only screen and (max-width: 37.5em) {
-    .show-only-tab-land {
+    .show-only-tab-port-s {
       display: none !important; } }
 
 .show-only-phone {
   display: none !important; }
-  @media only screen and (max-width: 75em) {
-    .show-only-phone {
-      display: none !important; } }
-  @media only screen and (max-width: 56.25em) {
-    .show-only-phone {
-      display: none !important; } }
   @media only screen and (max-width: 37.5em) {
     .show-only-phone {
+      display: block !important; } }
+  @media only screen and (max-width: 31.25em) {
+    .show-only-phone {
+      display: none !important; } }
+
+.show-only-phone-s {
+  display: none !important; }
+  @media only screen and (max-width: 31.25em) {
+    .show-only-phone-s {
+      display: block !important; } }
+  @media only screen and (max-width: 22.8em) {
+    .show-only-phone-s {
+      display: none !important; } }
+
+.show-only-phone-xs {
+  display: none !important; }
+  @media only screen and (max-width: 22.8em) {
+    .show-only-phone-xs {
       display: block !important; } }
 
 /* start showing from tab-land and continue to show for screens smaller than tab-land */
@@ -281,6 +341,7 @@ body {
     .show-tab-land-flex {
       display: flex !important; } }
 
+/* start showing from tab-land-s and continue to show for screens smaller than tab-land-s */
 .show-tab-land-s-flex {
   display: none !important; }
   @media only screen and (max-width: 62.5em) {
@@ -294,6 +355,13 @@ body {
     .show-tab-port-flex {
       display: flex !important; } }
 
+/* start showing from tab-port-s and continue to show for screens smaller than tab-port-s */
+.show-tab-port-s-flex {
+  display: none !important; }
+  @media only screen and (max-width: 47.5em) {
+    .show-tab-port-s-flex {
+      display: flex !important; } }
+
 /* start showing from phone and continue to show for screens smaller than phone */
 .show-phone-flex {
   display: none !important; }
@@ -301,40 +369,78 @@ body {
     .show-phone-flex {
       display: flex !important; } }
 
-.show-only-tab-port-flex {
+/* start showing from phone-s and continue to show for screens smaller than phone-s */
+.show-phone-s-flex {
   display: none !important; }
-  @media only screen and (max-width: 75em) {
-    .show-only-tab-port-flex {
-      display: none !important; } }
-  @media only screen and (max-width: 56.25em) {
-    .show-only-tab-port-flex {
+  @media only screen and (max-width: 31.25em) {
+    .show-phone-s-flex {
       display: flex !important; } }
-  @media only screen and (max-width: 37.5em) {
-    .show-only-tab-port-flex {
-      display: none !important; } }
+
+/* start showing from phone-xs and continue to show for screens smaller than phone-xs */
+.show-phone-xs-flex {
+  display: none !important; }
+  @media only screen and (max-width: 22.8em) {
+    .show-phone-xs-flex {
+      display: flex !important; } }
 
 .show-only-tab-land-flex {
   display: none !important; }
   @media only screen and (max-width: 75em) {
     .show-only-tab-land-flex {
       display: flex !important; } }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 62.5em) {
     .show-only-tab-land-flex {
       display: none !important; } }
+
+.show-only-tab-land-s-flex {
+  display: none !important; }
+  @media only screen and (max-width: 62.5em) {
+    .show-only-tab-land-s-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-tab-land-s-flex {
+      display: none !important; } }
+
+.show-only-tab-port-flex {
+  display: none !important; }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-tab-port-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 47.5em) {
+    .show-only-tab-port-flex {
+      display: none !important; } }
+
+.show-only-tab-port-s-flex {
+  display: none !important; }
+  @media only screen and (max-width: 47.5em) {
+    .show-only-tab-port-s-flex {
+      display: flex !important; } }
   @media only screen and (max-width: 37.5em) {
-    .show-only-tab-land-flex {
+    .show-only-tab-port-s-flex {
       display: none !important; } }
 
 .show-only-phone-flex {
   display: none !important; }
-  @media only screen and (max-width: 75em) {
-    .show-only-phone-flex {
-      display: none !important; } }
-  @media only screen and (max-width: 56.25em) {
-    .show-only-phone-flex {
-      display: none !important; } }
   @media only screen and (max-width: 37.5em) {
     .show-only-phone-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 31.25em) {
+    .show-only-phone-flex {
+      display: none !important; } }
+
+.show-only-phone-s-flex {
+  display: none !important; }
+  @media only screen and (max-width: 31.25em) {
+    .show-only-phone-s-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 22.8em) {
+    .show-only-phone-s-flex {
+      display: none !important; } }
+
+.show-only-phone-xs-flex {
+  display: none !important; }
+  @media only screen and (max-width: 22.8em) {
+    .show-only-phone-xs-flex {
       display: flex !important; } }
 
 .mt-0-2 {
