@@ -26,76 +26,65 @@
   display: none !important;
 }
 
-/* start hiding from tab-land and continue to hide for screens smaller than tab-land */
+/* hide from tab-land and below */
 .hide-tab-land {
   @include hide-from-and-below(tab-land);
 }
 
-/* start hiding from tab-land-s and continue to hide for screens smaller than tab-land-s */
 .hide-tab-land-s {
   @include hide-from-and-below(tab-land-s);
 }
 
-/* start hiding from tab-port and continue to hide for screens smaller than tab-port */
 .hide-tab-port {
   @include hide-from-and-below(tab-port);
 }
 
-/* start hiding from tab-port-s and continue to hide for screens smaller than tab-port-s */
 .hide-tab-port-s {
   @include hide-from-and-below(tab-port-s);
 }
 
-/* start hiding from phone and continue to hide for screens smaller than phone */
 .hide-phone {
   @include hide-from-and-below(phone);
 }
 
-/* start hiding from phone-s and continue to hide for screens smaller than phone-s */
 .hide-phone-s {
   @include hide-from-and-below(phone-s);
 }
 
-/* start hiding from phone-xs and continue to hide for screens smaller than phone-xs */
 .hide-phone-xs {
   @include hide-from-and-below(phone-xs);
 }
 
-/* start showing from tab-land and continue to show for screens smaller than tab-land */
+/* show for tab-land and below and set the display property to block */
 .show-tab-land {
   @include show-from-and-below(tab-land, block);
 }
 
-/* start showing from tab-land-s and continue to show for screens smaller than tab-land-s */
 .show-tab-land-s {
   @include show-from-and-below(tab-land-s, block);
 }
 
-/* start showing from tab-port and continue to show for screens smaller than tab-port */
 .show-tab-port {
   @include show-from-and-below(tab-port, block);
 }
 
-/* start showing from tab-port-s and continue to show for screens smaller than tab-port-s */
 .show-tab-port-s {
   @include show-from-and-below(tab-port-s, block);
 }
 
-/* start showing from phone and continue to show for screens smaller than phone */
 .show-phone {
   @include show-from-and-below(phone, block);
 }
 
-/* start showing from phone-s and continue to show for screens smaller than phone-s */
 .show-phone-s {
   @include show-from-and-below(phone-s, block);
 }
 
-/* start showing from phone-xs and continue to show for screens smaller than phone-xs */
 .show-phone-xs {
   @include show-from-and-below(phone-xs, block);
 }
 
+/* show only for tab-land and set the display property to block */
 .show-only-tab-land {
   @include show-only-for(tab-land, block);
 }
@@ -124,41 +113,36 @@
   @include show-only-for(phone-xs, block);
 }
 
-/* start showing from tab-land and continue to show for screens smaller than tab-land */
+/* show for tab-land and below and set the display property to flex*/
 .show-tab-land-flex {
   @include show-from-and-below(tab-land, flex);
 }
 
-/* start showing from tab-land-s and continue to show for screens smaller than tab-land-s */
 .show-tab-land-s-flex {
   @include show-from-and-below(tab-land-s, flex);
 }
 
-/* start showing from tab-port and continue to show for screens smaller than tab-port */
 .show-tab-port-flex {
   @include show-from-and-below(tab-port, flex);
 }
 
-/* start showing from tab-port-s and continue to show for screens smaller than tab-port-s */
 .show-tab-port-s-flex {
   @include show-from-and-below(tab-port-s, flex);
 }
 
-/* start showing from phone and continue to show for screens smaller than phone */
 .show-phone-flex {
   @include show-from-and-below(phone, flex);
 }
 
-/* start showing from phone-s and continue to show for screens smaller than phone-s */
 .show-phone-s-flex {
   @include show-from-and-below(phone-s, flex);
 }
 
-/* start showing from phone-xs and continue to show for screens smaller than phone-xs */
 .show-phone-xs-flex {
   @include show-from-and-below(phone-xs, flex);
 }
 
+/* show only for tab-land and set the display property to flex */
 .show-only-tab-land-flex {
   @include show-only-for(tab-land, flex);
 }
