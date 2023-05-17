@@ -47,9 +47,23 @@
   }
 }
 
+/* start hiding from tab-port-s and continue to hide for screens smaller than tab-port-s */
+.hide-tab-port-s {
+  @include respond(tab-port-s) {
+    display: none;
+  }
+}
+
 /* start hiding from phone and continue to hide for screens smaller than phone */
 .hide-phone {
   @include respond(phone) {
+    display: none;
+  }
+}
+
+/* start hiding from phone-s and continue to hide for screens smaller than phone-s */
+.hide-phone-s {
+  @include respond(phone-s) {
     display: none;
   }
 }
@@ -78,6 +92,14 @@
   }
 }
 
+/* start showing from tab-port-s and continue to show for screens smaller than tab-port-s */
+.show-tab-port-s {
+  display: none !important;
+  @include respond(tab-port-s) {
+    display: block !important;
+  }
+}
+
 /* start showing from phone and continue to show for screens smaller than phone */
 .show-phone {
   display: none !important;
@@ -86,16 +108,11 @@
   }
 }
 
-.show-only-tab-port {
+/* start showing from phone-s and continue to show for screens smaller than phone-s */
+.show-phone-s {
   display: none !important;
-  @include respond(tab-land) {
-    display: none !important;
-  }
-  @include respond(tab-port) {
+  @include respond(phone-s) {
     display: block !important;
-  }
-  @include respond(phone) {
-    display: none !important;
   }
 }
 
@@ -104,8 +121,35 @@
   @include respond(tab-land) {
     display: block !important;
   }
+  @include respond(tab-land-s) {
+    display: none !important;
+  }
+}
+
+.show-only-tab-land-s {
+  display: none !important;
+  @include respond(tab-land-s) {
+    display: block !important;
+  }
   @include respond(tab-port) {
     display: none !important;
+  }
+}
+
+.show-only-tab-port {
+  display: none !important;
+  @include respond(tab-port) {
+    display: block !important;
+  }
+  @include respond(tab-port-s) {
+    display: none !important;
+  }
+}
+
+.show-only-tab-port-s {
+  display: none !important;
+  @include respond(tab-port-s) {
+    display: block !important;
   }
   @include respond(phone) {
     display: none !important;
@@ -114,13 +158,17 @@
 
 .show-only-phone {
   display: none !important;
-  @include respond(tab-land) {
-    display: none !important;
-  }
-  @include respond(tab-port) {
-    display: none !important;
-  }
   @include respond(phone) {
+    display: block !important;
+  }
+  @include respond(phone-s) {
+    display: none !important;
+  }
+}
+
+.show-only-phone-s {
+  display: none !important;
+  @include respond(phone-s) {
     display: block !important;
   }
 }
@@ -133,6 +181,7 @@
   }
 }
 
+/* start showing from tab-land-s and continue to show for screens smaller than tab-land-s */
 .show-tab-land-s-flex {
   display: none !important;
   @include respond(tab-land-s) {
@@ -148,6 +197,14 @@
   }
 }
 
+/* start showing from tab-port-s and continue to show for screens smaller than tab-port-s */
+.show-tab-port-s-flex {
+  display: none !important;
+  @include respond(tab-port-s) {
+    display: flex !important;
+  }
+}
+
 /* start showing from phone and continue to show for screens smaller than phone */
 .show-phone-flex {
   display: none !important;
@@ -156,44 +213,14 @@
   }
 }
 
-.show-only-tab-port-flex {
+/* start showing from phone-s and continue to show for screens smaller than phone-s */
+.show-phone-s-flex {
   display: none !important;
-  @include respond(tab-land) {
-    display: none !important;
-  }
-  @include respond(tab-port) {
+  @include respond(phone-s) {
     display: flex !important;
-  }
-  @include respond(phone) {
-    display: none !important;
   }
 }
 
-.show-only-tab-land-flex {
-  display: none !important;
-  @include respond(tab-land) {
-    display: flex !important;
-  }
-  @include respond(tab-port) {
-    display: none !important;
-  }
-  @include respond(phone) {
-    display: none !important;
-  }
-}
-
-.show-only-phone-flex {
-  display: none !important;
-  @include respond(tab-land) {
-    display: none !important;
-  }
-  @include respond(tab-port) {
-    display: none !important;
-  }
-  @include respond(phone) {
-    display: flex !important;
-  }
-}
 .mt-0-2 {
   margin-top: 0.2rem;
 }
