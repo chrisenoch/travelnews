@@ -220,6 +220,11 @@ body {
   .hide-phone-s {
     display: none; } }
 
+/* start hiding from phone-xs and continue to hide for screens smaller than phone-xs */
+@media only screen and (max-width: 22.8em) {
+  .hide-phone-xs {
+    display: none; } }
+
 /* start showing from tab-land and continue to show for screens smaller than tab-land */
 .show-tab-land {
   display: none !important; }
@@ -260,6 +265,13 @@ body {
   display: none !important; }
   @media only screen and (max-width: 31.25em) {
     .show-phone-s {
+      display: block !important; } }
+
+/* start showing from phone-xs and continue to show for screens smaller than phone-xs */
+.show-phone-xs {
+  display: none !important; }
+  @media only screen and (max-width: 22.8em) {
+    .show-phone-xs {
       display: block !important; } }
 
 .show-only-tab-land {
@@ -312,6 +324,15 @@ body {
   @media only screen and (max-width: 31.25em) {
     .show-only-phone-s {
       display: block !important; } }
+  @media only screen and (max-width: 22.8em) {
+    .show-only-phone-s {
+      display: none !important; } }
+
+.show-only-phone-xs {
+  display: none !important; }
+  @media only screen and (max-width: 22.8em) {
+    .show-only-phone-xs {
+      display: block !important; } }
 
 /* start showing from tab-land and continue to show for screens smaller than tab-land */
 .show-tab-land-flex {
@@ -353,6 +374,73 @@ body {
   display: none !important; }
   @media only screen and (max-width: 31.25em) {
     .show-phone-s-flex {
+      display: flex !important; } }
+
+/* start showing from phone-xs and continue to show for screens smaller than phone-xs */
+.show-phone-xs-flex {
+  display: none !important; }
+  @media only screen and (max-width: 22.8em) {
+    .show-phone-xs-flex {
+      display: flex !important; } }
+
+.show-only-tab-land-flex {
+  display: none !important; }
+  @media only screen and (max-width: 75em) {
+    .show-only-tab-land-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 62.5em) {
+    .show-only-tab-land-flex {
+      display: none !important; } }
+
+.show-only-tab-land-s-flex {
+  display: none !important; }
+  @media only screen and (max-width: 62.5em) {
+    .show-only-tab-land-s-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-tab-land-s-flex {
+      display: none !important; } }
+
+.show-only-tab-port-flex {
+  display: none !important; }
+  @media only screen and (max-width: 56.25em) {
+    .show-only-tab-port-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 47.5em) {
+    .show-only-tab-port-flex {
+      display: none !important; } }
+
+.show-only-tab-port-s-flex {
+  display: none !important; }
+  @media only screen and (max-width: 47.5em) {
+    .show-only-tab-port-s-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 37.5em) {
+    .show-only-tab-port-s-flex {
+      display: none !important; } }
+
+.show-only-phone-flex {
+  display: none !important; }
+  @media only screen and (max-width: 37.5em) {
+    .show-only-phone-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 31.25em) {
+    .show-only-phone-flex {
+      display: none !important; } }
+
+.show-only-phone-s-flex {
+  display: none !important; }
+  @media only screen and (max-width: 31.25em) {
+    .show-only-phone-s-flex {
+      display: flex !important; } }
+  @media only screen and (max-width: 22.8em) {
+    .show-only-phone-s-flex {
+      display: none !important; } }
+
+.show-only-phone-xs-flex {
+  display: none !important; }
+  @media only screen and (max-width: 22.8em) {
+    .show-only-phone-xs-flex {
       display: flex !important; } }
 
 .mt-0-2 {

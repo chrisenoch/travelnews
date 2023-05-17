@@ -28,197 +28,163 @@
 
 /* start hiding from tab-land and continue to hide for screens smaller than tab-land */
 .hide-tab-land {
-  @include respond(tab-land) {
-    display: none;
-  }
+  @include hide-from-and-below(tab-land);
 }
 
 /* start hiding from tab-land-s and continue to hide for screens smaller than tab-land-s */
 .hide-tab-land-s {
-  @include respond(tab-land-s) {
-    display: none;
-  }
+  @include hide-from-and-below(tab-land-s);
 }
 
 /* start hiding from tab-port and continue to hide for screens smaller than tab-port */
 .hide-tab-port {
-  @include respond(tab-port) {
-    display: none;
-  }
+  @include hide-from-and-below(tab-port);
 }
 
 /* start hiding from tab-port-s and continue to hide for screens smaller than tab-port-s */
 .hide-tab-port-s {
-  @include respond(tab-port-s) {
-    display: none;
-  }
+  @include hide-from-and-below(tab-port-s);
 }
 
 /* start hiding from phone and continue to hide for screens smaller than phone */
 .hide-phone {
-  @include respond(phone) {
-    display: none;
-  }
+  @include hide-from-and-below(phone);
 }
 
 /* start hiding from phone-s and continue to hide for screens smaller than phone-s */
 .hide-phone-s {
-  @include respond(phone-s) {
-    display: none;
-  }
+  @include hide-from-and-below(phone-s);
+}
+
+/* start hiding from phone-xs and continue to hide for screens smaller than phone-xs */
+.hide-phone-xs {
+  @include hide-from-and-below(phone-xs);
 }
 
 /* start showing from tab-land and continue to show for screens smaller than tab-land */
 .show-tab-land {
-  display: none !important;
-  @include respond(tab-land) {
-    display: block !important;
-  }
+  @include show-from-and-below(tab-land, block);
 }
 
 /* start showing from tab-land-s and continue to show for screens smaller than tab-land-s */
 .show-tab-land-s {
-  display: none !important;
-  @include respond(tab-land-s) {
-    display: block !important;
-  }
+  @include show-from-and-below(tab-land-s, block);
 }
 
 /* start showing from tab-port and continue to show for screens smaller than tab-port */
 .show-tab-port {
-  display: none !important;
-  @include respond(tab-port) {
-    display: block !important;
-  }
+  @include show-from-and-below(tab-port, block);
 }
 
 /* start showing from tab-port-s and continue to show for screens smaller than tab-port-s */
 .show-tab-port-s {
-  display: none !important;
-  @include respond(tab-port-s) {
-    display: block !important;
-  }
+  @include show-from-and-below(tab-port-s, block);
 }
 
 /* start showing from phone and continue to show for screens smaller than phone */
 .show-phone {
-  display: none !important;
-  @include respond(phone) {
-    display: block !important;
-  }
+  @include show-from-and-below(phone, block);
 }
 
 /* start showing from phone-s and continue to show for screens smaller than phone-s */
 .show-phone-s {
-  display: none !important;
-  @include respond(phone-s) {
-    display: block !important;
-  }
+  @include show-from-and-below(phone-s, block);
+}
+
+/* start showing from phone-xs and continue to show for screens smaller than phone-xs */
+.show-phone-xs {
+  @include show-from-and-below(phone-xs, block);
 }
 
 .show-only-tab-land {
-  display: none !important;
-  @include respond(tab-land) {
-    display: block !important;
-  }
-  @include respond(tab-land-s) {
-    display: none !important;
-  }
+  @include show-only-for(tab-land, block);
 }
 
 .show-only-tab-land-s {
-  display: none !important;
-  @include respond(tab-land-s) {
-    display: block !important;
-  }
-  @include respond(tab-port) {
-    display: none !important;
-  }
+  @include show-only-for(tab-land-s, block);
 }
 
 .show-only-tab-port {
-  display: none !important;
-  @include respond(tab-port) {
-    display: block !important;
-  }
-  @include respond(tab-port-s) {
-    display: none !important;
-  }
+  @include show-only-for(tab-port, block);
 }
 
 .show-only-tab-port-s {
-  display: none !important;
-  @include respond(tab-port-s) {
-    display: block !important;
-  }
-  @include respond(phone) {
-    display: none !important;
-  }
+  @include show-only-for(tab-port-s, block);
 }
 
 .show-only-phone {
-  display: none !important;
-  @include respond(phone) {
-    display: block !important;
-  }
-  @include respond(phone-s) {
-    display: none !important;
-  }
+  @include show-only-for(phone, block);
 }
 
 .show-only-phone-s {
-  display: none !important;
-  @include respond(phone-s) {
-    display: block !important;
-  }
+  @include show-only-for(phone-s, block);
+}
+
+.show-only-phone-xs {
+  @include show-only-for(phone-xs, block);
 }
 
 /* start showing from tab-land and continue to show for screens smaller than tab-land */
 .show-tab-land-flex {
-  display: none !important;
-  @include respond(tab-land) {
-    display: flex !important;
-  }
+  @include show-from-and-below(tab-land, flex);
 }
 
 /* start showing from tab-land-s and continue to show for screens smaller than tab-land-s */
 .show-tab-land-s-flex {
-  display: none !important;
-  @include respond(tab-land-s) {
-    display: flex !important;
-  }
+  @include show-from-and-below(tab-land-s, flex);
 }
 
 /* start showing from tab-port and continue to show for screens smaller than tab-port */
 .show-tab-port-flex {
-  display: none !important;
-  @include respond(tab-port) {
-    display: flex !important;
-  }
+  @include show-from-and-below(tab-port, flex);
 }
 
 /* start showing from tab-port-s and continue to show for screens smaller than tab-port-s */
 .show-tab-port-s-flex {
-  display: none !important;
-  @include respond(tab-port-s) {
-    display: flex !important;
-  }
+  @include show-from-and-below(tab-port-s, flex);
 }
 
 /* start showing from phone and continue to show for screens smaller than phone */
 .show-phone-flex {
-  display: none !important;
-  @include respond(phone) {
-    display: flex !important;
-  }
+  @include show-from-and-below(phone, flex);
 }
 
 /* start showing from phone-s and continue to show for screens smaller than phone-s */
 .show-phone-s-flex {
-  display: none !important;
-  @include respond(phone-s) {
-    display: flex !important;
-  }
+  @include show-from-and-below(phone-s, flex);
+}
+
+/* start showing from phone-xs and continue to show for screens smaller than phone-xs */
+.show-phone-xs-flex {
+  @include show-from-and-below(phone-xs, flex);
+}
+
+.show-only-tab-land-flex {
+  @include show-only-for(tab-land, flex);
+}
+
+.show-only-tab-land-s-flex {
+  @include show-only-for(tab-land-s, flex);
+}
+
+.show-only-tab-port-flex {
+  @include show-only-for(tab-port, flex);
+}
+
+.show-only-tab-port-s-flex {
+  @include show-only-for(tab-port-s, flex);
+}
+
+.show-only-phone-flex {
+  @include show-only-for(phone, flex);
+}
+
+.show-only-phone-s-flex {
+  @include show-only-for(phone-s, flex);
+}
+
+.show-only-phone-xs-flex {
+  @include show-only-for(phone-xs, flex);
 }
 
 .mt-0-2 {
