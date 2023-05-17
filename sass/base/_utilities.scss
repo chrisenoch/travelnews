@@ -33,6 +33,7 @@
   }
 }
 
+/* start hiding from tab-land-s and continue to hide for screens smaller than tab-land-s */
 .hide-tab-land-s {
   @include respond(tab-land-s) {
     display: none;
@@ -57,6 +58,14 @@
 .show-tab-land {
   display: none !important;
   @include respond(tab-land) {
+    display: block !important;
+  }
+}
+
+/* start showing from tab-land-s and continue to show for screens smaller than tab-land-s */
+.show-tab-land-s {
+  display: none !important;
+  @include respond(tab-land-s) {
     display: block !important;
   }
 }

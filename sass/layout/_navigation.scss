@@ -51,6 +51,7 @@
   &__right {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: var(--spacing-3-2);
   }
 
@@ -97,10 +98,8 @@
 
   &__link {
     text-decoration: none;
-
-    &:not(.nav__cta) {
-      padding-bottom: 4px;
-    }
+    padding-bottom: 4px;
+    position: relative;
 
     &:link,
     &:visited {
@@ -108,13 +107,33 @@
       color: white;
     }
 
-    &:hover,
-    &:active {
-      border-bottom: 1px solid var(--color-tertiary);
+    // &:hover,
+    // &:active {
+    //   border-bottom: 1px solid var(--color-tertiary);
+    // }
+
+    &::before {
+      content: " ";
+      height: 1px;
+      margin-top: 5px;
+      display: block;
     }
 
-    &.nav__cta {
-      border-bottom: none;
+    &::after {
+      content: " ";
+      display: block;
+      width: 0px;
+      height: 1px;
+      margin: 5px auto 0;
+      transition: width 0.3s linear, background-color 0.3s linear;
+      background-color: transparent;
+    }
+
+    &:hover::after,
+    &:active::after {
+      content: "";
+      width: 100%;
+      background-color: var(--color-tertiary);
     }
   }
 
