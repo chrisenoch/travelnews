@@ -190,90 +190,79 @@ body {
 .display-none {
   display: none !important; }
 
-/* start hiding from tab-land and continue to hide for screens smaller than tab-land */
+/* hide from tab-land and below */
 @media only screen and (max-width: 75em) {
   .hide-tab-land {
     display: none; } }
 
-/* start hiding from tab-land-s and continue to hide for screens smaller than tab-land-s */
 @media only screen and (max-width: 62.5em) {
   .hide-tab-land-s {
     display: none; } }
 
-/* start hiding from tab-port and continue to hide for screens smaller than tab-port */
 @media only screen and (max-width: 56.25em) {
   .hide-tab-port {
     display: none; } }
 
-/* start hiding from tab-port-s and continue to hide for screens smaller than tab-port-s */
 @media only screen and (max-width: 47.5em) {
   .hide-tab-port-s {
     display: none; } }
 
-/* start hiding from phone and continue to hide for screens smaller than phone */
 @media only screen and (max-width: 37.5em) {
   .hide-phone {
     display: none; } }
 
-/* start hiding from phone-s and continue to hide for screens smaller than phone-s */
 @media only screen and (max-width: 31.25em) {
   .hide-phone-s {
     display: none; } }
 
-/* start hiding from phone-xs and continue to hide for screens smaller than phone-xs */
 @media only screen and (max-width: 22.8em) {
   .hide-phone-xs {
     display: none; } }
 
-/* start showing from tab-land and continue to show for screens smaller than tab-land */
+/* show for tab-land and below and set the display property to block */
 .show-tab-land {
   display: none !important; }
   @media only screen and (max-width: 75em) {
     .show-tab-land {
       display: block !important; } }
 
-/* start showing from tab-land-s and continue to show for screens smaller than tab-land-s */
 .show-tab-land-s {
   display: none !important; }
   @media only screen and (max-width: 62.5em) {
     .show-tab-land-s {
       display: block !important; } }
 
-/* start showing from tab-port and continue to show for screens smaller than tab-port */
 .show-tab-port {
   display: none !important; }
   @media only screen and (max-width: 56.25em) {
     .show-tab-port {
       display: block !important; } }
 
-/* start showing from tab-port-s and continue to show for screens smaller than tab-port-s */
 .show-tab-port-s {
   display: none !important; }
   @media only screen and (max-width: 47.5em) {
     .show-tab-port-s {
       display: block !important; } }
 
-/* start showing from phone and continue to show for screens smaller than phone */
 .show-phone {
   display: none !important; }
   @media only screen and (max-width: 37.5em) {
     .show-phone {
       display: block !important; } }
 
-/* start showing from phone-s and continue to show for screens smaller than phone-s */
 .show-phone-s {
   display: none !important; }
   @media only screen and (max-width: 31.25em) {
     .show-phone-s {
       display: block !important; } }
 
-/* start showing from phone-xs and continue to show for screens smaller than phone-xs */
 .show-phone-xs {
   display: none !important; }
   @media only screen and (max-width: 22.8em) {
     .show-phone-xs {
       display: block !important; } }
 
+/* show only for tab-land and set the display property to block */
 .show-only-tab-land {
   display: none !important; }
   @media only screen and (max-width: 75em) {
@@ -334,55 +323,50 @@ body {
     .show-only-phone-xs {
       display: block !important; } }
 
-/* start showing from tab-land and continue to show for screens smaller than tab-land */
+/* show for tab-land and below and set the display property to flex*/
 .show-tab-land-flex {
   display: none !important; }
   @media only screen and (max-width: 75em) {
     .show-tab-land-flex {
       display: flex !important; } }
 
-/* start showing from tab-land-s and continue to show for screens smaller than tab-land-s */
 .show-tab-land-s-flex {
   display: none !important; }
   @media only screen and (max-width: 62.5em) {
     .show-tab-land-s-flex {
       display: flex !important; } }
 
-/* start showing from tab-port and continue to show for screens smaller than tab-port */
 .show-tab-port-flex {
   display: none !important; }
   @media only screen and (max-width: 56.25em) {
     .show-tab-port-flex {
       display: flex !important; } }
 
-/* start showing from tab-port-s and continue to show for screens smaller than tab-port-s */
 .show-tab-port-s-flex {
   display: none !important; }
   @media only screen and (max-width: 47.5em) {
     .show-tab-port-s-flex {
       display: flex !important; } }
 
-/* start showing from phone and continue to show for screens smaller than phone */
 .show-phone-flex {
   display: none !important; }
   @media only screen and (max-width: 37.5em) {
     .show-phone-flex {
       display: flex !important; } }
 
-/* start showing from phone-s and continue to show for screens smaller than phone-s */
 .show-phone-s-flex {
   display: none !important; }
   @media only screen and (max-width: 31.25em) {
     .show-phone-s-flex {
       display: flex !important; } }
 
-/* start showing from phone-xs and continue to show for screens smaller than phone-xs */
 .show-phone-xs-flex {
   display: none !important; }
   @media only screen and (max-width: 22.8em) {
     .show-phone-xs-flex {
       display: flex !important; } }
 
+/* show only for tab-land and set the display property to flex */
 .show-only-tab-land-flex {
   display: none !important; }
   @media only screen and (max-width: 75em) {
@@ -997,7 +981,8 @@ body {
     .travel-guides__section-b__container {
       display: grid;
       grid-template-columns: repeat(2, 8.85rem) repeat(4, 1fr); }
-      .travel-guides__section-b__container .was-auto-resized {
+      .travel-guides__section-b__container .was-auto-resized,
+      .travel-guides__section-b__container .auto-resize {
         width: 17.7rem;
         height: 11.8rem;
         height: 13rem; }
@@ -1038,7 +1023,8 @@ body {
         .travel-guides__section-c__sub-1 {
           display: flex;
           flex-wrap: wrap; } }
-      .travel-guides__section-c__sub-1 .was-auto-resized {
+      .travel-guides__section-c__sub-1 .was-auto-resized,
+      .travel-guides__section-c__sub-1 .auto-resize {
         max-height: 16rem;
         width: 100%;
         grid-column: span 2; }
@@ -1219,13 +1205,15 @@ body {
         .travel-news-two__section-a h3 {
           font-size: 1.6rem;
           font-size: clamp(16px, 1.6rem, 1.6rem); } }
-    .travel-news-two__section-a .was-auto-resized {
+    .travel-news-two__section-a .was-auto-resized,
+    .travel-news-two__section-a .auto-resize {
       min-width: 23rem;
       /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
       max-width: 23rem;
       max-height: 13.8rem; }
       @media only screen and (max-width: 62.5em) {
-        .travel-news-two__section-a .was-auto-resized {
+        .travel-news-two__section-a .was-auto-resized,
+        .travel-news-two__section-a .auto-resize {
           max-width: 100%;
           height: 16rem;
           width: 100%;
@@ -1245,7 +1233,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-1-6); }
-    .travel-news-two__section-b .was-auto-resized {
+    .travel-news-two__section-b .was-auto-resized,
+    .travel-news-two__section-b .auto-resize {
       min-width: 18rem;
       /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
       max-width: 18rem;
@@ -1283,7 +1272,8 @@ body {
     gap: var(--spacing-2-4);
     width: 41.6rem;
     /* width of two small cards plus gap from sponsored-cards__container class  */ }
-  .sponsored-cards__card .was-auto-resized {
+  .sponsored-cards__card .was-auto-resized,
+  .sponsored-cards__card .auto-resize {
     height: 20rem;
     width: 100%; }
   .sponsored-cards__card img {

@@ -17,7 +17,8 @@
   }
 
   &__card {
-    .was-auto-resized {
+    .was-auto-resized,
+    .auto-resize {
       height: 20rem;
       width: 100%;
     }
