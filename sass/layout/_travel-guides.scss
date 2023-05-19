@@ -80,7 +80,8 @@
       display: grid;
       grid-template-columns: repeat(2, 8.85rem) repeat(4, 1fr);
 
-      .was-auto-resized {
+      .was-auto-resized,
+      .auto-resize {
         width: 17.7rem;
         height: 11.8rem;
         height: 13rem;
@@ -138,7 +139,8 @@
         flex-wrap: wrap;
       }
 
-      .was-auto-resized {
+      .was-auto-resized,
+      .auto-resize {
         // display: inline;
         max-height: 16rem;
         width: 100%;

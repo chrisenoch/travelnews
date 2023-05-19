@@ -57,7 +57,8 @@
       }
     }
 
-    .was-auto-resized {
+    .was-auto-resized,
+    .auto-resize {
       min-width: 23rem; /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
       max-width: 23rem;
       max-height: 13.8rem;
@@ -90,7 +91,8 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-1-6);
 
-    .was-auto-resized {
+    .was-auto-resized,
+    .auto-resize {
       min-width: 18rem; /* min-width used because this is a flex item. Width is taken as flex-basis, which is just an "ideal width." Flexbox would reduce the width depending on the contents of other flex items   */
       max-width: 18rem;
       height: 10.8rem;
