@@ -1,8 +1,8 @@
 # travelnews
-News website to practice CSS grid, Sass, media queries, responsive images and JavaScript.
+News website to practise CSS Grid, Sass, media queries, responsive images and JavaScript.
 
 ## CSS Features
--	I deliberately chose to implement a difficult layout in order to improve my knowledge of CSS grid.
+-	I deliberately chose to implement a difficult layout in order to improve my knowledge of CSS Grid.
 -	Designed the website myself.
 -	Sass used to keep code dry and accelerate the development process.
 -	Fully responsive with media queries that make use of Sass conditionals.
