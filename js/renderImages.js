@@ -1,5 +1,12 @@
 export { runScript }
 
+/* IMPORTANT
+This app works correcty but it is not 100% finished. I still need to:
+- Document code throughly. 
+- Write tests for the code.
+You can see examples of my testing and documentation in my Java projects on GitHub. E.g. "lessonplan-website, "datingwebsite," "costofliving-rest-api"
+*/
+
 function runScript(availableWidths) {
     if (availableWidths < 1) {
         throw new Error('you must pass an array of available image widths before this script can be started');
@@ -14,7 +21,9 @@ function runScript(availableWidths) {
     });
 }
 
+
 function renderImagesOnResize(images, availableWidths) {
+
     //render a new size for existing images
     renderImages(images, availableWidths, false);
 
@@ -34,6 +43,12 @@ function renderImages(images, availableWidths, isFirstRender) { //imageContainer
 
     let imageContainerClass = isFirstRender ? 'auto-resize' : 'was-auto-resized';
     images.forEach((image) => {
+
+        //If JavaScript tries to load an image that does not exist, load the image that was originally specified in the src attribute
+        if (isFirstRender) {
+            loadOriginalImageOnError(images, image);
+        }
+
         let imageContainer = findClosestParentWithClass(image, imageContainerClass);
         if (!imageContainer) {
             console.error("Error: - No imageContainer detected. Each image should have one image container");
@@ -81,6 +96,32 @@ function renderImages(images, availableWidths, isFirstRender) { //imageContainer
 
     });
 
+}
+
+function loadOriginalImageOnError(images, image) {
+    let srcOriginal = image.src;
+    let countObj = {
+        count: 0
+    }
+
+    image.addEventListener('error', () => {
+        helper(images, image, srcOriginal, countObj)
+    });
+
+    function helper(images, image, srcOriginal, countObj) {
+        if (countObj.count < 1) { //Stops setting the src if an error has just occured. This prevents infinite recursion
+            image.src = srcOriginal;
+            //remove image from global images array so if the screen is resized, we don't try to resize the image again. 
+            let index = images.indexOf(image);
+            if (index > -1) {
+                console.log("about to remove image");
+                images.splice(index, 1);
+            }
+            console.log("about to remove event listener");
+            image.removeEventListener('error', helper);
+            countObj.count++;
+        }
+    }
 }
 
 //returns the size extension of the image if exists or returns empty string
