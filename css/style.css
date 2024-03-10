@@ -663,7 +663,8 @@ body {
   max-width: inherit;
   min-height: inherit;
   max-height: inherit;
-  object-fit: cover; }
+  object-fit: cover;
+  object-position: top; }
 
 .section-heading {
   padding-top: var(--spacing-9-6);
